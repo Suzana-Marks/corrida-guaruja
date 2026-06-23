@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corridas de Rua no Guarujá</title>
+    <!-- Fonte Inter: Ultra moderna e limpa -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset Geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Menu de Navegação */
+        header {
+            background-color: #0f172a;
+            color: #ffffff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #f97316; /* Laranja Moderno */
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 24px;
+        }
+
+        nav ul li a {
+            color: #94a3b8;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: #f97316;
+        }
+
+        /* Secção Destaque (Hero) */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=1200') no-repeat center center/cover;
+            color: #ffffff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            background-color: #f97316;
+            color: #ffffff;
+            padding: 12px 32px;
+            border-radius: 9999px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #ea580c;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3);
+        }
+
+        /* Secção Calendário */
+        .eventos {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .eventos h2 {
+            font-size: 2rem;
+            color: #0f172a;
+            margin-bottom: 48px;
+        }
+
+        .grid-corridas {
+            display: flex;
+            justify-content: center;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-data {
+            color: #f97316;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-title {
+            font-size: 1.6rem;
+            margin: 16px 0;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .card-detalhes {
+            font-size: 1rem;
+            color: #64748b;
+            margin-bottom: 32px;
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.9rem;
+            border-top: 1px solid #1e293b;
+        }
+
+        /* Responsividade Básica */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">corridasderua<span>noguaruja</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#calendario">Inscrições</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Corridas de Rua no Guarujá</h1>
+            <p>Garanta sua vaga na próxima etapa oficial e desafie seus limites no litoral.</p>
+            <a href="#calendario" class="btn">Inscrições Abertas</a>
+        </div>
+    </section>
+
+    <section id="calendario" class="eventos container">
+        <h2>Próximo Evento Destacado</h2>
+        <div class="grid-corridas">
+            
+            <!-- CARD ÚNICO: CORRIDA DOS FORTES (GUARUJÁ) -->
+            <div class="card">
+                <span class="card-data">📅 Domingo, 26 de Julho às 07h</span>
+                <h3 class="card-title">8º Corrida Dos Fortes Guarujá</h3>
+                <div class="card-detalhes">
+                    📍 <strong>Local:</strong> Portaria do Forte dos Andradas, Guarujá (SP)<br>
+                    🏢 <strong>Endereço:</strong> Rua Horácio Guedes Barreiro, s/n - CEP: 11421-080<br>
+                    ⏱️ <strong>Distâncias:</strong> 2K de Caminhada, 5K e 10K de Corrida
+                </div>
+                <!-- LINK OFICIAL CONFIGURADO -->
+                <a href="https://olhaoingresso.com.br/8corridadosfortesguaruja.html" target="_blank" class="btn" style="width: 100%; text-align: center;">Comprar Ingresso</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 corridasderuanoguaruja.com.br. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
