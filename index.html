@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corrida dos Fortes Guarujá 2026 | Inscrições Abertas</title>
-    <!-- Tailwind CSS para estilização de alta performance -->
+    <title>VIII Corrida do Forte 10K - Guarujá 2026</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter para leitura e Montserrat para títulos esportivos imponentes -->
+    <!-- FontAwesome para ícones premium -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,700;0,800;1,900&display=swap" rel="stylesheet">
-    <!-- FontAwesome para ícones premium -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -19,481 +19,588 @@
                 extend: {
                     colors: {
                         brand: {
-                            light: '#F8FAFC',       /* Off-white super limpo e moderno (fundo) */
-                            card: '#FFFFFF',        /* Branco puro para os cards */
-                            cardLight: '#F1F5F9',   /* Cinza bem claro para sub-cards e lotes */
-                            accent: '#84CC16',      /* Verde limão esportivo vibrante para botões */
-                            accentHover: '#65A30D', /* Verde limão escuro para efeitos hover */
-                            accentText: '#4D7C0F',  /* Verde oliva escuro para textos em fundo claro */
-                            textDark: '#0F172A',    /* Cinza escuro quase preto para títulos marcantes */
-                            textMuted: '#475569'    /* Slate intermediário para leitura perfeita e confortável */
+                            light: '#bef264',
+                            DEFAULT: '#a3e635', // Verde-limão esportivo
+                            dark: '#84cc16',
+                            charcoal: '#0f172a', // Cinza-escuro sofisticado
+                            slate: '#f8fafc', // Off-white premium
                         }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        athletic: ['Montserrat', 'sans-serif']
+                        sans: ['Montserrat', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     <style>
-        .glass-header {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+        body {
+            background-color: #f8fafc;
+            font-family: 'Montserrat', sans-serif;
         }
-        .img-aspect-banner {
-            aspect-ratio: 1920 / 395;
+        /* Custom scrollbar para manter a sofisticação */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        @media (max-width: 768px) {
-            .img-aspect-banner {
-                aspect-ratio: 16 / 9; /* Melhora a proporção no celular */
-            }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
         }
     </style>
 </head>
-<body class="bg-brand-light text-brand-textDark font-sans antialiased selection:bg-brand-accent selection:text-black">
+<body class="text-slate-800 flex flex-col min-h-screen">
 
-    <!-- Menu Superior Translúcido Premium -->
-    <header class="fixed top-0 left-0 w-full z-50 glass-header border-b border-slate-200/60 transition-all duration-300 shadow-sm">
+    <!-- Header / Navbar Principal -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="bg-brand-accent text-brand-textDark p-2 rounded-lg font-athletic font-extrabold text-xl italic tracking-tighter shadow-sm">
-                    CFG
-                </div>
-                <span class="font-athletic font-bold text-lg tracking-wide text-brand-textDark hidden sm:block">CORRIDAS DO GUARUJÁ</span>
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <span class="bg-brand text-brand-charcoal font-black italic px-3 py-1.5 rounded text-lg tracking-wider shadow-sm">
+                    // QUANTOS KM
+                </span>
+                <span class="text-xs font-semibold uppercase tracking-widest text-slate-400 hidden sm:inline-block">
+                    Eventos Esportivos
+                </span>
             </div>
-            
-            <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-brand-textMuted">
-                <a href="#inicio" class="text-brand-textDark hover:text-brand-accentText transition-colors">Início</a>
-                <a href="#detalhes" class="hover:text-brand-accentText transition-colors">Detalhes do Evento</a>
-                <a href="#regulamentos" class="hover:text-brand-accentText transition-colors">Regulamentos</a>
-                <a href="#suporte" class="hover:text-brand-accentText transition-colors">Suporte</a>
+
+            <!-- Menu de Navegação -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#detalhes" class="text-sm font-semibold text-slate-600 hover:text-brand-charcoal transition-colors">Início</a>
+                <a href="#modalidades" class="text-sm font-semibold text-slate-600 hover:text-brand-charcoal transition-colors">Modalidades</a>
+                <a href="#premiacao" class="text-sm font-semibold text-slate-600 hover:text-brand-charcoal transition-colors">Premiação</a>
+                <a href="#inscricoes" class="text-sm font-semibold text-slate-600 hover:text-brand-charcoal transition-colors">Valores</a>
+                <button onclick="abrirTermos()" class="text-sm font-semibold text-slate-600 hover:text-brand-charcoal transition-colors">Termos de Uso</button>
             </nav>
 
-            <div>
-                <a href="https://olhaoingresso.com.br/8corridadosfortesguaruja.html" target="_blank" class="bg-brand-accent hover:bg-brand-accentHover text-brand-textDark px-6 py-2.5 rounded-full font-athletic font-extrabold text-xs uppercase tracking-widest transition-all duration-300 transform hover:scale-105 inline-block text-center shadow-[0_4px_14px_rgba(132,204,22,0.3)]">
-                    COMPRAR INGRESSO
+            <!-- Botão de Inscrição Rápida -->
+            <div class="flex items-center gap-4">
+                <a href="https://olhaoingresso.com.br/8corridadosfortesguaruja.html" target="_blank" class="bg-brand-charcoal text-white hover:bg-brand hover:text-brand-charcoal font-bold px-6 py-2.5 rounded-full text-xs uppercase tracking-wider transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2 transform hover:-translate-y-0.5">
+                    Comprar Ingresso <i class="fa-solid fa-ticket"></i>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Seção Banner Destaque Superior (1920x395 Proporcional) -->
-    <section id="inicio" class="pt-20">
-        <div class="w-full relative overflow-hidden bg-brand-card border-b border-slate-200/60 shadow-sm">
-            <div class="w-full img-aspect-banner relative">
-                <!-- Imagem Oficial do Kit da Corrida dos Fortes adaptada para os dois possíveis nomes -->
-                <img src="image_265643.png%20.png" 
-                     onerror="this.src='image_265643.png'"
-                     alt="VIII Corrida do Forte Guarujá - Banner Oficial" 
-                     class="w-full h-full object-cover object-center absolute inset-0">
-                
-                <!-- Sutil degradiente claro para harmonizar com as bordas e garantir sofisticação -->
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-light/20 to-transparent"></div>
+    <!-- Banner Principal (Hero - 1920x395) -->
+    <section class="relative w-full overflow-hidden bg-slate-200">
+        <div class="w-full max-w-7xl mx-auto">
+            <div class="aspect-[1920/395] relative w-full shadow-lg">
+                <img 
+                    src="image_265643.png .png" 
+                    alt="Banner VIII Corrida do Forte" 
+                    class="w-full h-full object-cover"
+                    onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1502224562085-639556652f33?auto=format&fit=crop&w=1920&q=80';"
+                />
+                <div class="absolute inset-0 bg-gradient-to-r from-brand-charcoal/30 to-transparent pointer-events-none"></div>
             </div>
         </div>
     </section>
 
-    <!-- Barra de Informações Rápidas -->
-    <div class="bg-brand-card border-b border-slate-200/60 py-6 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                <!-- Informações do Evento -->
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full md:w-auto">
-                    <div class="flex items-center gap-3 bg-brand-light px-4 py-3 rounded-xl border border-slate-200/50 shadow-sm">
-                        <i class="fa-solid fa-calendar-day text-brand-accentText text-xl"></i>
-                        <div>
-                            <span class="text-[10px] text-brand-textMuted uppercase block font-semibold">Data do Evento</span>
-                            <span class="text-sm font-bold font-athletic text-brand-textDark">26/07/2026</span>
-                        </div>
+    <!-- Barra de Informações Rápidas e Ação Principal -->
+    <section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-10 relative z-10 mb-12">
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <!-- Grid de Info rápida -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 w-full md:w-auto">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand/25 text-brand-charcoal flex items-center justify-center text-xl shadow-sm">
+                        <i class="fa-regular fa-calendar-days"></i>
                     </div>
-                    <div class="flex items-center gap-3 bg-brand-light px-4 py-3 rounded-xl border border-slate-200/50 shadow-sm">
-                        <i class="fa-solid fa-map-pin text-brand-accentText text-xl"></i>
-                        <div>
-                            <span class="text-[10px] text-brand-textMuted uppercase block font-semibold">Local</span>
-                            <span class="text-sm font-bold font-athletic text-brand-textDark">Guarujá, SP</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3 bg-brand-light px-4 py-3 rounded-xl border border-slate-200/50 shadow-sm">
-                        <i class="fa-solid fa-clock text-brand-accentText text-xl"></i>
-                        <div>
-                            <span class="text-[10px] text-brand-textMuted uppercase block font-semibold">Inscrições Desde</span>
-                            <span class="text-sm font-bold font-athletic text-brand-textDark">18/03/2026</span>
-                        </div>
+                    <div>
+                        <p class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Data do Evento</p>
+                        <p class="text-sm font-bold text-slate-800">26 de Julho de 2026</p>
                     </div>
                 </div>
-
-                <!-- Botão Comprar Ingresso -->
-                <div class="w-full md:w-auto">
-                    <a href="https://olhaoingresso.com.br/8corridadosfortesguaruja.html" target="_blank" class="w-full md:w-auto block text-center bg-brand-accent hover:bg-brand-accentHover text-brand-textDark font-athletic font-black px-12 py-4 rounded-xl text-sm uppercase tracking-wider transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-brand-accent/30">
-                        COMPRAR INGRESSO <i class="fa-solid fa-chevron-right ml-2"></i>
-                    </a>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand/25 text-brand-charcoal flex items-center justify-center text-xl shadow-sm">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Localização</p>
+                        <p class="text-sm font-bold text-slate-800">Guarujá, SP</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand/25 text-brand-charcoal flex items-center justify-center text-xl shadow-sm">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Inscrições Desde</p>
+                        <p class="text-sm font-bold text-slate-800">18 de Março de 2026</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- Botão Gigante de Conversão -->
+            <div class="w-full md:w-auto text-center md:text-right">
+                <a href="https://olhaoingresso.com.br/8corridadosfortesguaruja.html" target="_blank" class="inline-flex items-center justify-center gap-3 w-full sm:w-auto bg-brand hover:bg-brand-charcoal text-brand-charcoal hover:text-white font-extrabold uppercase text-sm tracking-widest px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    Comprar Ingresso <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Conteúdo Principal do Evento -->
-    <main id="detalhes" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+    <!-- Layout em Duas Colunas -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 w-full flex-grow">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
-            <!-- COLUNA DA ESQUERDA: Informações Detalhadas (8 colunas) -->
-            <div class="lg:col-span-8 space-y-8">
-                
-                <!-- Descrição e Apresentação -->
-                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 sm:p-8 shadow-sm">
-                    <div class="flex items-center gap-2 text-brand-accentText font-bold text-lg mb-4">
-                        <span>🏃‍♂️🔥</span>
-                        <h2 class="font-athletic italic uppercase tracking-tight text-brand-textDark">Corrida dos Fortes 2026 – Guarujá</h2>
-                        <span>🔥🏃‍♂️</span>
+            <!-- Coluna da Esquerda (Mais Larga - 2/3) -->
+            <section class="lg:col-span-2 space-y-8" id="detalhes">
+                <!-- Card de Apresentação Principal -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <span class="w-2 h-8 bg-brand rounded-full"></span>
+                        <h1 class="text-2xl font-extrabold text-slate-800 uppercase tracking-tight">
+                            🏆 VIII Corrida dos Fortes 2026 – Guarujá 🏆
+                        </h1>
                     </div>
-                    <p class="text-brand-textMuted text-sm sm:text-base leading-relaxed">
-                        Prepare-se para um dos eventos mais esperados do ano! A <strong class="text-brand-textDark">Corrida dos Fortes 2026</strong> chega com muita energia, esporte e superação ⚡. Desafie-se correndo por caminhos repletos de história e belezas naturais preservadas no Forte dos Andradas.
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Prepare-se para um dos eventos mais aguardados do ano! A <strong>Corrida dos Fortes 2026</strong> chega com muita energia, esporte e superação. Desafie-se correndo por caminhos repletos de história e belezas naturais preservadas no Forte dos Andradas.
                     </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-100 text-xs">
+                        <div class="flex items-center gap-2 text-slate-600">
+                            <i class="fa-regular fa-calendar text-brand-charcoal font-bold text-sm"></i>
+                            <span><strong>Data:</strong> 26 de Julho de 2026</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-600">
+                            <i class="fa-solid fa-location-crosshairs text-brand-charcoal font-bold text-sm"></i>
+                            <span><strong>Local:</strong> Forte dos Andradas</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-600">
+                            <i class="fa-regular fa-clock text-brand-charcoal font-bold text-sm"></i>
+                            <span><strong>Horário:</strong> 07h00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card de Modalidades -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 space-y-6" id="modalidades">
+                    <div class="flex items-center gap-3">
+                        <span class="w-2 h-8 bg-brand rounded-full"></span>
+                        <h2 class="text-xl font-extrabold text-slate-800 uppercase tracking-tight">🏃‍♂️ Modalidades</h2>
+                    </div>
+                    <p class="text-slate-500 text-xs">Escolha o seu desafio ideal para esta edição:</p>
                     
-                    <!-- Dados Básicos -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 pt-6 border-t border-slate-100 text-sm text-brand-textMuted">
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-calendar text-brand-accentText"></i>
-                            <span><strong class="text-brand-textDark">Data:</strong> 26 de Julho de 2026</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-location-dot text-brand-accentText"></i>
-                            <span><strong class="text-brand-textDark">Local:</strong> Forte dos Andradas</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-stopwatch text-brand-accentText"></i>
-                            <span><strong class="text-brand-textDark">Horário:</strong> 07h00</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modalidades -->
-                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 sm:p-8 shadow-sm">
-                    <h3 class="font-athletic font-extrabold text-lg italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-shoe-prints text-brand-accentText"></i> Modalidades
-                    </h3>
-                    <p class="text-brand-textMuted text-xs sm:text-sm mb-4">Escolha seu desafio ideal para esta edição:</p>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div class="bg-brand-light p-4 rounded-xl border border-slate-200/40 flex items-center gap-3 shadow-sm">
-                            <span class="text-2xl">🚶‍♂️</span>
-                            <div>
-                                <h4 class="font-bold text-sm text-brand-textDark">Caminhada</h4>
-                                <p class="text-xs text-brand-accentText font-athletic">Distância: 2K</p>
-                            </div>
+                        <div class="p-5 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand/5 hover:border-brand/30 transition-all text-center">
+                            <i class="fa-solid fa-person-walking text-2xl text-brand-charcoal mb-3"></i>
+                            <h3 class="font-bold text-slate-800 text-sm">Caminhada</h3>
+                            <p class="text-brand-charcoal font-extrabold text-lg mt-1">2K</p>
                         </div>
-                        <div class="bg-brand-light p-4 rounded-xl border border-slate-200/40 flex items-center gap-3 shadow-sm">
-                            <span class="text-2xl">🏃‍♂️</span>
-                            <div>
-                                <h4 class="font-bold text-sm text-brand-textDark">Corrida</h4>
-                                <p class="text-xs text-brand-accentText font-athletic">Distância: 5K</p>
-                            </div>
+                        <div class="p-5 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand/5 hover:border-brand/30 transition-all text-center">
+                            <i class="fa-solid fa-person-running text-2xl text-brand-charcoal mb-3"></i>
+                            <h3 class="font-bold text-slate-800 text-sm">Corrida</h3>
+                            <p class="text-brand-charcoal font-extrabold text-lg mt-1">5K</p>
                         </div>
-                        <div class="bg-brand-light p-4 rounded-xl border border-slate-200/40 flex items-center gap-3 shadow-sm">
-                            <span class="text-2xl">⚡</span>
-                            <div>
-                                <h4 class="font-bold text-sm text-brand-textDark">Corrida Elite</h4>
-                                <p class="text-xs text-brand-accentText font-athletic">Distância: 10K</p>
-                            </div>
+                        <div class="p-5 rounded-xl border border-slate-100 bg-slate-50 hover:bg-brand/5 hover:border-brand/30 transition-all text-center">
+                            <i class="fa-solid fa-person-running text-2xl text-brand-charcoal mb-3"></i>
+                            <h3 class="font-bold text-slate-800 text-sm">Corrida Elite</h3>
+                            <p class="text-brand-charcoal font-extrabold text-lg mt-1">10K</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Premiação -->
-                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 sm:p-8 shadow-sm">
-                    <h3 class="font-athletic font-extrabold text-lg italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-trophy text-brand-accentText"></i> Premiação
-                    </h3>
-                    <ul class="space-y-3 text-sm text-brand-textMuted">
+                <!-- Card de Premiação -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 space-y-6" id="premiacao">
+                    <div class="flex items-center gap-3">
+                        <span class="w-2 h-8 bg-brand rounded-full"></span>
+                        <h2 class="text-xl font-extrabold text-slate-800 uppercase tracking-tight">🏅 Premiação</h2>
+                    </div>
+                    <ul class="space-y-4 text-sm text-slate-600">
                         <li class="flex items-start gap-3">
-                            <span class="text-brand-accentText text-base">🏅</span>
-                            <span>Medalha exclusiva para todos os participantes que concluírem a prova regulamentar.</span>
+                            <div class="w-6 h-6 rounded bg-brand/30 text-brand-charcoal flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-medal text-xs"></i>
+                            </div>
+                            <span><strong>Medalha Exclusiva:</strong> Para todos os participantes que concluírem a prova regularmente.</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-brand-accentText text-base">🏆</span>
-                            <span>Troféu de destaque especial para o 1º ao 5º lugar geral (nas modalidades de 5K e 10K).</span>
+                            <div class="w-6 h-6 rounded bg-brand/30 text-brand-charcoal flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-trophy text-xs"></i>
+                            </div>
+                            <span><strong>Troféu Geral:</strong> Troféu de destaque especial para o 1º ao 5º lugar geral (nas modalidades de 5K e 10K).</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-brand-accentText text-base">🎖️</span>
-                            <span>Premiação dedicada por faixa etária (exclusivamente na modalidade 10K).</span>
+                            <div class="w-6 h-6 rounded bg-brand/30 text-brand-charcoal flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-award text-xs"></i>
+                            </div>
+                            <span><strong>Faixa Etária:</strong> Premiação dedicada por faixa etária (exclusivamente na modalidade 10K).</span>
                         </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-accentText text-base">🚫</span>
-                            <span>Atenção: Não haverá premiação em dinheiro físico para os vencedores.</span>
+                        <li class="flex items-start gap-3 text-red-500 font-medium">
+                            <div class="w-6 h-6 rounded bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-circle-info text-xs"></i>
+                            </div>
+                            <span><strong>Atenção:</strong> Não haverá premiação em dinheiro físico para os vencedores.</span>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Inscrições e Lotes -->
-                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 sm:p-8 shadow-sm">
-                    <h3 class="font-athletic font-extrabold text-lg italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-ticket text-brand-accentText"></i> Inscrições
-                    </h3>
-                    <p class="text-brand-textMuted text-xs sm:text-sm mb-6 flex items-center gap-2">
-                        <i class="fa-solid fa-laptop text-brand-accentText"></i> Todas as inscrições são realizadas de forma prática e segura online.
-                    </p>
+                <!-- Card de Inscrições e Lotes -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 space-y-6" id="inscricoes">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-2 h-8 bg-brand rounded-full"></span>
+                            <h2 class="text-xl font-extrabold text-slate-800 uppercase tracking-tight">🎟️ Inscrições</h2>
+                        </div>
+                        <span class="bg-emerald-100 text-emerald-800 text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full">
+                            Seguro Online
+                        </span>
+                    </div>
+                    <p class="text-slate-500 text-xs">Todas as inscrições são realizadas de forma prática, segura e oficial.</p>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <!-- Lote 1 -->
-                        <div class="bg-brand-light p-6 rounded-xl border border-slate-200/60 relative overflow-hidden group hover:border-brand-accent/60 transition-all duration-300 shadow-sm">
-                            <span class="absolute top-0 right-0 bg-brand-accent text-brand-textDark font-athletic font-black text-[9px] px-3 py-1 rounded-bl-lg uppercase">
-                                Lote 1
-                            </span>
-                            <h4 class="font-athletic font-bold text-sm text-brand-textDark uppercase mb-3">1º Lote (Até 03/06)</h4>
-                            <div class="space-y-2">
-                                <div class="flex justify-between items-center text-sm">
-                                    <span class="text-brand-textMuted">Kit Completo</span>
-                                    <span class="text-brand-accentText font-bold">R$ 110,00 <span class="text-[10px] text-brand-textMuted">+ taxa</span></span>
+                        <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50 relative overflow-hidden">
+                            <span class="absolute top-0 right-0 bg-brand text-brand-charcoal text-[9px] uppercase font-extrabold tracking-widest px-3 py-1 rounded-bl-lg">Lote 1</span>
+                            <h4 class="font-bold text-slate-800 text-sm uppercase mb-4">1º Lote (Até 03/06)</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between text-xs text-slate-600">
+                                    <span>Kit Completo</span>
+                                    <span class="font-extrabold text-brand-charcoal text-sm">R$ 110,00 <span class="text-[10px] font-normal text-slate-400">+ taxa</span></span>
                                 </div>
-                                <div class="flex justify-between items-center text-sm pt-2 border-t border-slate-200/40">
-                                    <span class="text-brand-textMuted">Kit Econômico</span>
-                                    <span class="text-brand-accentText font-bold">R$ 75,00 <span class="text-[10px] text-brand-textMuted">+ taxa</span></span>
+                                <div class="flex justify-between text-xs text-slate-600 pt-2 border-t border-dashed border-slate-200">
+                                    <span>Kit Económico</span>
+                                    <span class="font-extrabold text-brand-charcoal text-sm">R$ 70,00 <span class="text-[10px] font-normal text-slate-400">+ taxa</span></span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Lote 2 -->
-                        <div class="bg-brand-light p-6 rounded-xl border border-slate-200/60 relative overflow-hidden group hover:border-brand-accent/60 transition-all duration-300 shadow-sm">
-                            <span class="absolute top-0 right-0 bg-brand-accent/20 text-brand-accentText font-athletic font-black text-[9px] px-3 py-1 rounded-bl-lg uppercase">
-                                Lote 2
-                            </span>
-                            <h4 class="font-athletic font-bold text-sm text-brand-textDark uppercase mb-3">2º Lote (Até 19/07)</h4>
-                            <div class="space-y-2">
-                                <div class="flex justify-between items-center text-sm">
-                                    <span class="text-brand-textMuted">Kit Completo</span>
-                                    <span class="text-brand-accentText font-bold">R$ 125,00 <span class="text-[10px] text-brand-textMuted">+ taxa</span></span>
+                        <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50 relative overflow-hidden">
+                            <span class="absolute top-0 right-0 bg-slate-200 text-slate-600 text-[9px] uppercase font-extrabold tracking-widest px-3 py-1 rounded-bl-lg">Lote 2</span>
+                            <h4 class="font-bold text-slate-800 text-sm uppercase mb-4">2º Lote (Até 19/07)</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between text-xs text-slate-600">
+                                    <span>Kit Completo</span>
+                                    <span class="font-extrabold text-brand-charcoal text-sm">R$ 125,00 <span class="text-[10px] font-normal text-slate-400">+ taxa</span></span>
                                 </div>
-                                <div class="flex justify-between items-center text-sm pt-2 border-t border-slate-200/40">
-                                    <span class="text-brand-textMuted">Kit Econômico</span>
-                                    <span class="text-brand-accentText font-bold">R$ 90,00 <span class="text-[10px] text-brand-textMuted">+ taxa</span></span>
+                                <div class="flex justify-between text-xs text-slate-600 pt-2 border-t border-dashed border-slate-200">
+                                    <span>Kit Económico</span>
+                                    <span class="font-extrabold text-brand-charcoal text-sm">R$ 90,00 <span class="text-[10px] font-normal text-slate-400">+ taxa</span></span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Bloco de Alerta Esportivo Light -->
-                    <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-4 flex items-center gap-3">
-                        <span class="text-lg">⚠️</span>
-                        <p class="text-xs text-amber-800 font-medium">Atenção: Vagas limitadas! Garanta sua presença antes da virada de lote.</p>
+                    <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs flex gap-2">
+                        <i class="fa-solid fa-triangle-exclamation text-base mt-0.5 flex-shrink-0"></i>
+                        <span><strong>Atenção:</strong> Vagas limitadas! Garanta sua presença antes da virada de lote.</span>
                     </div>
                 </div>
 
-                <!-- Kit do Atleta -->
-                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 sm:p-8 shadow-sm">
-                    <h3 class="font-athletic font-extrabold text-lg italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-shirt text-brand-accentText"></i> Kit do Atleta
-                    </h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="bg-brand-light p-5 rounded-xl border border-slate-200/40 shadow-sm">
-                            <h4 class="font-bold text-sm text-brand-accentText uppercase mb-2">🎒 Kit Completo</h4>
-                            <p class="text-xs text-brand-textMuted leading-relaxed">
-                                Inclui camiseta oficial exclusiva em tecido tecnológico, boné de alta proteção, sacochila esportiva reforçada, número de peito oficial de corrida e chip de cronometragem.
+                <!-- Card de Kit do Atleta -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <span class="w-2 h-8 bg-brand rounded-full"></span>
+                        <h2 class="text-xl font-extrabold text-slate-800 uppercase tracking-tight">🎽 Kit do Atleta</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="p-5 rounded-xl border border-slate-100 bg-slate-50">
+                            <h3 class="font-bold text-slate-800 text-xs uppercase mb-3 flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-brand"></span> Kit Completo
+                            </h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">
+                                Inclui camiseta oficial exclusiva em tecido tecnológico, boné de alta proteção, sacochila esportiva reforçada, numeral de peito personalizado com alfinetes e chip eletrônico de cronometragem de alta precisão.
                             </p>
                         </div>
-                        <div class="bg-brand-light p-5 rounded-xl border border-slate-200/40 shadow-sm">
-                            <h4 class="font-bold text-sm text-brand-accentText uppercase mb-2">🏷️ Kit Econômico</h4>
-                            <p class="text-xs text-brand-textMuted leading-relaxed">
+                        <div class="p-5 rounded-xl border border-slate-100 bg-slate-50">
+                            <h3 class="font-bold text-slate-800 text-xs uppercase mb-3 flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-slate-400"></span> Kit Econômico
+                            </h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">
                                 Contém número de peito oficial de corrida e o chip de cronometragem de alta precisão para a sua prova.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Informações Importantes -->
-                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 sm:p-8 shadow-sm">
-                    <h3 class="font-athletic font-extrabold text-lg italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-circle-info text-brand-accentText"></i> Informações Importantes
-                    </h3>
-                    <ul class="space-y-3 text-sm text-brand-textMuted">
-                        <li class="flex items-center gap-2">
-                            <i class="fa-solid fa-circle-check text-brand-accentText"></i> Tempo máximo de prova regulamentar: 2 horas.
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fa-solid fa-circle-check text-brand-accentText"></i> O evento acontecerá sob qualquer condição climática 🌧️☀️.
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fa-solid fa-circle-check text-brand-accentText"></i> Idade mínima de participação regulada conforme regras oficiais.
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fa-solid fa-circle-check text-brand-accentText"></i> Atletas com idade acima de 60 anos têm direito a 50% de desconto.
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fa-solid fa-circle-check text-brand-accentText"></i> As inscrições encerram em 19/07/2026 ou ao atingir o limite técnico.
-                        </li>
-                    </ul>
-                    <div class="mt-4 bg-brand-light p-4 rounded-xl border border-slate-200/60">
-                        <p class="text-xs text-brand-textMuted leading-relaxed">
-                            <strong class="text-brand-textDark">⚠️ Atenção obrigatória:</strong> Ao efetuar a sua inscrição, o atleta declara estar plenamente apto físico e clinicamente para participar e concorda integralmente com as regras do evento.
-                        </p>
+                <!-- Card do Mapa de Percurso -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <span class="w-2 h-8 bg-brand rounded-full"></span>
+                        <h2 class="text-xl font-extrabold text-slate-800 uppercase tracking-tight">🗺️ Mapa de Percurso</h2>
+                    </div>
+                    <p class="text-slate-600 text-sm">
+                        Confira o traçado das rotas oficiais de 2K, 5K e 10K traçados nos arredores históricos do Forte dos Andradas:
+                    </p>
+                    <div class="rounded-xl border border-slate-200 overflow-hidden relative shadow-sm max-w-lg mx-auto">
+                        <img 
+                            src="Captura%20de%20tela%202026-06-23%20104241.png" 
+                            alt="Mapa do Percurso da Corrida" 
+                            class="w-full object-cover aspect-[4/3]"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80';"
+                        />
                     </div>
                 </div>
 
-                <!-- Mapa do Percurso (Recortado dinamicamente via CSS do print original) -->
-                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 sm:p-8 shadow-sm">
-                    <h3 class="font-athletic font-extrabold text-lg italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-map-location-dot text-brand-accentText"></i> Mapa do Percurso
-                    </h3>
-                    <div class="rounded-xl overflow-hidden bg-brand-light border border-slate-200/60 relative aspect-[16/10] w-full shadow-inner">
-                        <!-- Recorte CSS ultra-preciso focado no mapa de rotas azul do print original -->
-                        <img src="Captura%20de%20tela%202026-06-23%20104241.png" 
-                             alt="Mapa do Percurso Forte dos Andradas" 
-                             class="absolute w-full h-full object-cover"
-                             style="object-position: 45.4% 87.5%; transform: scale(3.2); transform-origin: 45.4% 87.5%;"
-                             onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Mapa+do+Percurso+Forte+dos+Andradas'">
-                        
-                        <!-- Overlay Informativo flutuante light -->
-                        <div class="absolute bottom-4 left-4 z-10 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-slate-200/60 max-w-xs shadow-lg">
-                            <h4 class="font-bold text-xs text-brand-textDark flex items-center gap-2">
-                                <i class="fa-solid fa-route text-brand-accentText"></i> Percurso Oficial 10K / 5K / 2K
-                            </h4>
-                            <p class="text-[10px] text-brand-textMuted mt-1">
-                                Trajeto histórico exclusivo passando por dentro do Forte dos Andradas, Guarujá.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            </section>
 
-            </div>
-
-            <!-- COLUNA DA DIREITA: Sidebar / Painel Lateral (4 colunas) -->
-            <aside class="lg:col-span-4 space-y-6">
-                
+            <!-- Coluna da Direita (Painel Lateral - 1/3) -->
+            <aside class="space-y-8">
                 <!-- Regulamentos -->
-                <div id="regulamentos" class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 shadow-sm">
-                    <h3 class="font-athletic font-extrabold text-md italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-file-pdf text-brand-accentText"></i> Regulamentos
-                    </h3>
-                    <div class="space-y-3 text-sm">
-                        <a href="#" class="flex items-center justify-between p-3 bg-brand-light rounded-xl border border-slate-200/40 hover:border-brand-accent/40 transition-all group shadow-sm">
-                            <span class="text-xs text-brand-textMuted group-hover:text-brand-textDark font-medium transition-colors">📄 Regulamento Oficial</span>
-                            <i class="fa-solid fa-download text-brand-accentText text-xs"></i>
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-4">
+                    <h3 class="text-sm font-bold uppercase text-slate-400 tracking-wider">📄 Documentação</h3>
+                    <div class="space-y-2">
+                        <a href="#" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-brand/10 transition-colors border border-slate-100 text-xs font-semibold text-slate-700">
+                            <span>Regulamento Oficial</span>
+                            <i class="fa-solid fa-file-pdf text-red-500 text-sm"></i>
                         </a>
-                        <a href="#" class="flex items-center justify-between p-3 bg-brand-light rounded-xl border border-slate-200/40 hover:border-brand-accent/40 transition-all group shadow-sm">
-                            <span class="text-xs text-brand-textMuted group-hover:text-brand-textDark font-medium transition-colors">📄 Termos de Uso</span>
-                            <i class="fa-solid fa-download text-brand-accentText text-xs"></i>
-                        </a>
+                        <button onclick="abrirTermos()" class="w-full flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-brand/10 transition-colors border border-slate-100 text-xs font-semibold text-slate-700">
+                            <span>Termos de Uso da Plataforma</span>
+                            <i class="fa-solid fa-file-shield text-emerald-500 text-sm"></i>
+                        </button>
                     </div>
                 </div>
 
                 <!-- Prazos Importantes -->
-                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 shadow-sm">
-                    <h3 class="font-athletic font-extrabold text-md italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-hourglass-half text-brand-accentText"></i> Prazos Importantes
-                    </h3>
-                    <div class="bg-brand-light p-4 rounded-xl border border-slate-200/40 shadow-sm">
-                        <span class="text-[10px] text-brand-accentText font-bold uppercase tracking-widest block mb-1">Período de Ajustes</span>
-                        <p class="text-xs text-brand-textMuted leading-relaxed">
-                            Alterações de titularidade, alteração do tamanho do Kit adquirido ou alteração da modalidade escolhida devem ser feitas impreterivelmente de:
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-4">
+                    <h3 class="text-sm font-bold uppercase text-slate-400 tracking-wider">⏱️ Prazos Importantes</h3>
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                        <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-1">Período de Ajustes</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Alterações de dados (titularidade, tamanho do kit ou modalidade escolhida) podem ser feitas de:
                         </p>
-                        <div class="mt-3 text-xs bg-brand-card p-2 rounded-lg text-center font-athletic font-bold text-brand-textDark border border-slate-200/60 shadow-sm">
+                        <p class="text-xs font-bold text-slate-800 mt-2 bg-brand/35 inline-block px-2 py-0.5 rounded">
                             18/03/2026 até 19/07/2026
-                        </div>
+                        </p>
                     </div>
                 </div>
 
-                <!-- Organizador / Suporte -->
-                <div id="suporte" class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 shadow-sm">
-                    <h3 class="font-athletic font-extrabold text-md italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-user-shield text-brand-accentText"></i> Organizador/Suporte
-                    </h3>
-                    <div class="space-y-4 text-xs text-brand-textMuted">
+                <!-- Organizador/Suporte -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-4">
+                    <h3 class="text-sm font-bold uppercase text-slate-400 tracking-wider">📞 Suporte & Organização</h3>
+                    <div class="space-y-4 text-xs text-slate-600">
                         <div>
-                            <span class="text-[10px] uppercase text-brand-textDark font-bold block mb-1">Realização</span>
-                            <span class="text-brand-accentText font-athletic font-extrabold">EDUCA GUARUJÁ</span>
+                            <p class="font-bold text-slate-800 uppercase text-[10px] tracking-widest text-slate-400 mb-1">Realização</p>
+                            <p class="font-semibold text-slate-700">Educa Guarujá</p>
                         </div>
-                        <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
-                            <i class="fa-solid fa-envelope text-brand-accentText text-base"></i>
-                            <div>
-                                <span class="block text-[9px] uppercase font-semibold">E-mail de Contato</span>
-                                <a href="mailto:educa.vendas@gmail.com" class="text-brand-textDark font-medium hover:underline">educa.vendas@gmail.com</a>
-                            </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-charcoal text-sm w-4"></i>
+                            <a href="mailto:educavirtual@gmail.com" class="hover:underline">educavirtual@gmail.com</a>
                         </div>
-                        <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
-                            <i class="fa-solid fa-phone text-brand-accentText text-base"></i>
-                            <div>
-                                <span class="block text-[9px] uppercase font-semibold">Suporte Fone</span>
-                                <a href="tel:+5513991211711" class="text-brand-textDark font-medium hover:underline">(13) 99121-1711</a>
-                            </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-charcoal text-sm w-4"></i>
+                            <span>(13) 99721-1711</span>
                         </div>
-                        <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
-                            <i class="fa-solid fa-comments text-brand-accentText text-base"></i>
-                            <div>
-                                <span class="block text-[9px] uppercase font-semibold">WhatsApp Suporte</span>
-                                <a href="https://wa.me/5513997211711" target="_blank" class="text-brand-textDark hover:underline font-bold">(13) 99721-1711</a>
-                            </div>
+                        <div class="pt-2">
+                            <a href="https://wa.me/5513997211711" target="_blank" class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-2.5 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                                <i class="fa-brands fa-whatsapp text-sm"></i> Chamar no WhatsApp
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Compartilhe -->
-                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 shadow-sm">
-                    <h3 class="font-athletic font-extrabold text-md italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-share-nodes text-brand-accentText"></i> Compartilhe
-                    </h3>
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-4">
+                    <h3 class="text-sm font-bold uppercase text-slate-400 tracking-wider">📤 Compartilhar</h3>
                     <div class="flex items-center gap-3">
-                        <a href="#" class="w-10 h-10 rounded-xl bg-pink-600 hover:bg-pink-500 flex items-center justify-center text-white text-lg transition-colors shadow-md">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-xl bg-green-600 hover:bg-green-500 flex items-center justify-center text-white text-lg transition-colors shadow-md">
+                        <a href="https://wa.me/?text=Participe%20da%20VIII%20Corrida%20dos%20Fortes%20Guarujá%202026!%20Inscrições%20em%20https://suzana-marks.github.io/corrida-guaruja/" target="_blank" class="w-10 h-10 rounded-full bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white flex items-center justify-center text-lg transition-all">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-xl bg-blue-600 hover:bg-blue-500 flex items-center justify-center text-white text-lg transition-colors shadow-md">
-                            <i class="fa-brands fa-facebook"></i>
+                        <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-full bg-[#E1306C]/10 text-[#E1306C] hover:bg-[#E1306C] hover:text-white flex items-center justify-center text-lg transition-all">
+                            <i class="fa-brands fa-instagram"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Kits Disponíveis (Imagens Oficiais Aplicadas) -->
-                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 shadow-sm">
-                    <h3 class="font-athletic font-extrabold text-md italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-box-open text-brand-accentText"></i> Kits Disponíveis
-                    </h3>
-                    <div class="space-y-4">
-                        <!-- Card do Kit Oficial utilizando a imagem image_265945.png -->
-                        <div class="bg-brand-light p-4 rounded-xl border border-slate-200/60 shadow-sm">
-                            <div class="w-full aspect-[4/5] rounded-lg overflow-hidden bg-brand-card border border-slate-200/40 mb-3 relative shadow-inner">
-                                <img src="image_265945.png" 
-                                     onerror="this.src='https://placehold.co/300x375/e2e8f0/475569?text=Kit+Oficial'"
-                                     alt="Kit Oficial do Atleta - Corrida dos Fortes" 
-                                     class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="text-xs font-bold text-brand-textDark uppercase tracking-wider flex justify-between items-center">
-                                <span>KIT COMPLETO</span>
-                                <span class="text-brand-accentText font-extrabold">OFICIAL</span>
-                            </h4>
-                            <p class="text-[10px] text-brand-textMuted mt-1 leading-relaxed">
-                                Camiseta Oficial Azul + Sacochila Esportiva + Boné Exclusivo + Numeral de Peito Oficial e Chip Eletrônico.
-                            </p>
-                        </div>
+                <!-- Kits Disponíveis (361x208) -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-4">
+                    <h3 class="text-sm font-bold uppercase text-slate-400 tracking-wider">👕 Kits Disponíveis</h3>
+                    <div class="rounded-xl border border-slate-200 overflow-hidden relative shadow-sm aspect-[361/208]">
+                        <img 
+                            src="image_265945.png" 
+                            alt="Foto Oficial do Kit" 
+                            class="w-full h-full object-cover"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=400&q=80';"
+                        />
                     </div>
                 </div>
-
             </aside>
 
         </div>
     </main>
 
-    <!-- Rodapé Premium Dark (Ancoragem visual sofisticada) -->
-    <footer class="bg-slate-900 text-white py-12 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-6 mb-8">
-                <div class="flex items-center gap-3">
-                    <div class="bg-brand-accent text-slate-900 p-2 rounded-lg font-athletic font-extrabold text-xl italic tracking-tighter">
-                        CFG
-                    </div>
-                    <span class="font-athletic font-bold text-lg tracking-wide text-white">CORRIDAS DO GUARUJÁ</span>
-                </div>
-                <div class="text-slate-400 text-xs font-medium">
-                    Plataforma Oficial de Corridas de Guarujá © 2026. Todos os direitos reservados.
-                </div>
+    <!-- Rodapé Premium Ancorado -->
+    <footer class="bg-brand-charcoal text-slate-400 text-xs py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex flex-col items-center md:items-start gap-1">
+                <span class="text-white font-black italic tracking-wider text-base">
+                    // QUANTOS KM
+                </span>
+                <p class="text-slate-500">© 2026 Plataforma Quantos Km. Todos os direitos reservados.</p>
             </div>
-            <div class="text-[11px] text-slate-500 text-center sm:text-left border-t border-slate-800 pt-6 leading-relaxed">
-                Este site é um parceiro oficial da Olha o Ingresso. Todas as inscrições são processadas de forma segura de acordo com a LGPD e normas bancárias vigentes. Realização por EDUCA GUARUJÁ.
+            <div class="flex items-center gap-6">
+                <button onclick="abrirTermos()" class="hover:text-white transition-colors">Termos de Uso</button>
+                <a href="#detalhes" class="hover:text-white transition-colors">Voltar ao Topo</a>
             </div>
         </div>
     </footer>
 
+    <!-- POPUP MODAL: TERMOS DE USO -->
+    <div id="modal-termos" class="fixed inset-0 z-50 bg-brand-charcoal/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white w-full max-w-3xl rounded-2xl shadow-2xl border border-slate-200 flex flex-col max-h-[85vh] overflow-hidden transform scale-95 transition-transform duration-300">
+            <!-- Cabeçalho do Modal -->
+            <div class="p-6 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-file-shield text-brand-charcoal text-xl"></i>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-base uppercase">Termos de Uso</h3>
+                        <p class="text-[10px] text-slate-400 font-semibold tracking-wider uppercase">Plataforma Quantos Km</p>
+                    </div>
+                </div>
+                <button onclick="fecharTermos()" class="w-8 h-8 rounded-full bg-slate-200/50 hover:bg-slate-200 text-slate-600 hover:text-brand-charcoal flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Corpo de Texto (Scrollable) -->
+            <div class="p-6 sm:p-8 overflow-y-auto space-y-6 text-sm text-slate-600 leading-relaxed">
+                <div>
+                    <p class="text-xs font-semibold text-brand-charcoal mb-4">📅 Última atualização: 12/02/2026</p>
+                    <p>
+                        Bem-vindo(a) à Plataforma QuantosKm. Estes TERMOS DE USO regulam a utilização de nossa plataforma de inscrição em corridas de rua e eventos esportivos. Ao utilizar os serviços, você declara ter lido, compreendido e concordado com as condições abaixo.
+                    </p>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-extrabold text-slate-800 text-xs uppercase tracking-wider">1. Objeto</h4>
+                    <p>A Plataforma QuantosKm disponibiliza um ambiente online que possibilita:</p>
+                    <ul class="list-disc list-inside space-y-1 pl-2">
+                        <li>A inscrição de usuários em corridas de rua e eventos esportivos;</li>
+                        <li>O gerenciamento de inscrições pelos organizadores;</li>
+                        <li>O processamento seguro de pagamentos por meio de parceiros financeiros;</li>
+                        <li>A comunicação de informações relevantes sobre os eventos.</li>
+                    </ul>
+                    <p class="text-xs italic bg-slate-50 p-3 rounded border border-slate-100">
+                        A QuantosKm não organiza, promove ou executa os eventos, atuando exclusivamente como intermediadora tecnológica.
+                    </p>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-extrabold text-slate-800 text-xs uppercase tracking-wider">2. Cadastro do Usuário</h4>
+                    <ul class="list-disc list-inside space-y-1 pl-2">
+                        <li>Para utilizar os serviços, o usuário deverá fornecer informações verdadeiras, completas e atualizadas;</li>
+                        <li>O usuário é responsável por manter a confidencialidade de suas credenciais (e-mail e número de telefone móvel);</li>
+                        <li>O uso da plataforma por menores de 18 anos somente é permitido com consentimento dos pais ou responsáveis legais.</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-extrabold text-slate-800 text-xs uppercase tracking-wider">3. Inscrições e Pagamentos</h4>
+                    <ul class="list-disc list-inside space-y-1.5 pl-2">
+                        <li>A inscrição em corridas de rua e eventos esportivos somente será confirmada após o preenchimento completo do cadastro e a validação do pagamento;</li>
+                        <li>Os pagamentos são processados por intermediadores financeiros parceiros, de forma segura, conforme descrito na Política de Privacidade;</li>
+                        <li><strong>Direito de arrependimento:</strong> Em conformidade com o artigo 49 do Código de Defesa do Consumidor, o usuário poderá exercer o direito de arrependimento no prazo de 7 (sete) dias corridos a contar da data da inscrição, desde que o pedido seja realizado antes da realização do evento, com devolução do valor pago;</li>
+                        <li>Após o prazo legal, eventuais pedidos de cancelamento, reembolso ou troca de titularidade seguirão as regras previstas no regulamento de cada evento, desde que não contrariem a legislação aplicável;</li>
+                        <li>Em caso de cancelamento do evento por parte do organizador, o participante deverá realizar as eventuais devoluções de valores pagos diretamente com o organizador;</li>
+                        <li>Em caso de adiamento ou alteração de data, o participante poderá optar pela manutenção da inscrição na nova data ou pela solicitação de reembolso.</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-extrabold text-slate-800 text-xs uppercase tracking-wider">4. Responsabilidades do Usuário</h4>
+                    <p>
+                        Ao utilizar a plataforma de inscrição, o usuário compromete-se a observar a legislação vigente e a agir conforme os princípios da boa-fé e da lealdade contratual, nos termos do artigo 422 do Código Civil Brasileiro (Lei nº 10.406/2002). O usuário compromete-se a:
+                    </p>
+                    <ul class="list-disc list-inside space-y-1.5 pl-2">
+                        <li>Utilizar a plataforma de forma lícita, ética e compatível com sua finalidade, abstendo-se de qualquer conduta que viole a legislação aplicável;</li>
+                        <li>Fornecer dados pessoais verdadeiros, corretos, completos e atualizados, sendo expressamente vedada a utilização de informações ou documentos pertencentes a terceiros, inclusive CPF. O uso de dados de outra pessoa para realização de inscrição caracteriza fraude, viola o dever de boa-fé contratual e poderá ensejar responsabilização civil;</li>
+                        <li>Ler atentamente e cumprir integralmente o regulamento específico de cada corrida e/ou evento esportivo no qual venha a se inscrever, reconhecendo que a inscrição implica aceitação expressa das regras ali previstas;</li>
+                        <li>Efetuar o pagamento da inscrição dentro dos prazos estabelecidos, observando as condições divulgadas para cada evento;</li>
+                        <li>Não utilizar a plataforma para fins fraudulentos, ilícitos ou que comprometam a segurança, a integridade dos dados, a estabilidade ou o regular funcionamento do sistema.</li>
+                    </ul>
+                    <p class="text-xs text-red-600 bg-red-50 p-3 rounded border border-red-100">
+                        O descumprimento das obrigações acima poderá resultar na suspensão ou cancelamento do cadastro, anulação da inscrição, exclusão do usuário da plataforma e responsabilização por eventuais danos causados, nos termos dos artigos 186 e 927 do Código Civil, sem prejuízo das demais medidas cabíveis.
+                    </p>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-extrabold text-slate-800 text-xs uppercase tracking-wider">5. Responsabilidades do Organizador do Evento</h4>
+                    <p>O organizador compromete-se a:</p>
+                    <ul class="list-disc list-inside space-y-1 pl-2">
+                        <li>Disponibilizar informações claras, precisas e atualizadas sobre o evento (data, local, categorias, regulamento, valores e regras de reembolso);</li>
+                        <li>Cumprir integralmente o regulamento divulgado;</li>
+                        <li>Garantir a execução do evento em conformidade com as normas legais e de segurança aplicáveis;</li>
+                        <li>Informar imediatamente aos participantes e à plataforma quaisquer alterações ou cancelamentos;</li>
+                        <li>Responder diretamente por eventuais danos, falhas ou descumprimentos relacionados à organização ou execução do evento.</li>
+                    </ul>
+                    <p>A Plataforma QuantosKm não se responsabiliza por alterações, adiamentos, cancelamentos, danos sofridos decorrentes de participação ou custos decorrentes de erros de terceiros.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-extrabold text-slate-800 text-xs uppercase tracking-wider">6. Responsabilidades da Plataforma QuantosKm</h4>
+                    <ul class="list-disc list-inside space-y-1 pl-2">
+                        <li>Disponibilizar o sistema de inscrições de forma estável e segura, ressalvadas manutenções programadas e falhas técnicas;</li>
+                        <li>Proteger os dados pessoais de acordo com a Política de Privacidade;</li>
+                        <li>Oferecer suporte técnico e operacional dentro do escopo de sua atuação como intermediadora.</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-extrabold text-slate-800 text-xs uppercase tracking-wider">7. Propriedade Intelectual</h4>
+                    <p>Todo o conteúdo disponibilizado na Plataforma QuantosKm, incluindo marcas, logotipos, layout, textos, imagens, software e funcionalidades, é protegido por direitos de propriedade intelectual e não pode ser utilizado sem autorização expressa.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-extrabold text-slate-800 text-xs uppercase tracking-wider">8. Alterações dos Termos de Uso</h4>
+                    <p>A Plataforma QuantosKm poderá modificar estes Termos de Uso a qualquer momento. A versão atualizada estará sempre disponível no site, com indicação da data da última atualização.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-extrabold text-slate-800 text-xs uppercase tracking-wider">9. Comunicações</h4>
+                    <p>As comunicações oficiais serão realizadas por meio do e-mail cadastrado pelo usuário ou por avisos disponibilizados no site da plataforma.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-extrabold text-slate-800 text-xs uppercase tracking-wider">10. Legislação Aplicável e Foro</h4>
+                    <p>Estes Termos de Uso são regidos pela legislação brasileira. Fica eleito o foro da comarca de Presidente Prudente – São Paulo, com renúncia de qualquer outro, para dirimir eventuais litígios relacionados a este documento.</p>
+                </div>
+            </div>
+
+            <!-- Rodapé do Modal -->
+            <div class="p-6 border-t border-slate-100 flex justify-end bg-slate-50">
+                <button onclick="fecharTermos()" class="bg-brand-charcoal text-white hover:bg-brand hover:text-brand-charcoal font-bold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-colors shadow">
+                    Entendi e Concordo
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript para Interatividade do Modal -->
+    <script>
+        const modal = document.getElementById('modal-termos');
+        const modalContent = modal.querySelector('.transform');
+
+        function abrirTermos() {
+            modal.classList.remove('hidden');
+            // Timeout curto para que o efeito de transição funcione
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+            }, 10);
+            document.body.style.overflow = 'hidden'; // Impede o scroll de fundo
+        }
+
+        function fecharTermos() {
+            modal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+            document.body.style.overflow = 'auto'; // Reativa o scroll de fundo
+        }
+
+        // Fechar se o usuário clicar fora do container do modal
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                fecharTermos();
+            }
+        });
+    </script>
 </body>
 </html>
