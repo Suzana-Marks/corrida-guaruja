@@ -3,244 +3,495 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corridas de Rua no Guarujá</title>
-    <!-- Fonte Inter: Ultra moderna e limpa -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Reset Geral */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background-color: #f8fafc;
-            color: #1e293b;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Menu de Navegação */
-        header {
-            background-color: #0f172a;
-            color: #ffffff;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.4rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .logo span {
-            color: #f97316; /* Laranja Moderno */
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 24px;
-        }
-
-        nav ul li a {
-            color: #94a3b8;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        nav ul li a:hover {
-            color: #f97316;
-        }
-
-        /* Secção Destaque (Hero) */
-        .hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=1200') no-repeat center center/cover;
-            color: #ffffff;
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            letter-spacing: -1px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #cbd5e1;
-            margin-bottom: 32px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn {
-            background-color: #f97316;
-            color: #ffffff;
-            padding: 12px 32px;
-            border-radius: 9999px;
-            font-weight: 600;
-            display: inline-block;
-            transition: all 0.2s;
-        }
-
-        .btn:hover {
-            background-color: #ea580c;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3);
-        }
-
-        /* Secção Calendário */
-        .eventos {
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .eventos h2 {
-            font-size: 2rem;
-            color: #0f172a;
-            margin-bottom: 48px;
-        }
-
-        .grid-corridas {
-            display: flex;
-            justify-content: center;
-        }
-
-        .card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 40px;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-data {
-            color: #f97316;
-            font-weight: 700;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .card-title {
-            font-size: 1.6rem;
-            margin: 16px 0;
-            color: #0f172a;
-            font-weight: 700;
-        }
-
-        .card-detalhes {
-            font-size: 1rem;
-            color: #64748b;
-            margin-bottom: 32px;
-            text-align: left;
-            line-height: 1.8;
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: #0f172a;
-            color: #94a3b8;
-            text-align: center;
-            padding: 40px 0;
-            font-size: 0.9rem;
-            border-top: 1px solid #1e293b;
-        }
-
-        /* Responsividade Básica */
-        @media (max-width: 768px) {
-            header .container {
-                flex-direction: column;
-                gap: 16px;
+    <title>Corrida dos Fortes Guarujá 2026 | Inscrições Abertas</title>
+    <!-- Tailwind CSS para estilização de alta performance -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter para leitura e Montserrat para títulos esportivos imponentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,700;0,800;1,900&display=swap" rel="stylesheet">
+    <!-- FontAwesome para ícones premium -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#F8FAFC',       /* Off-white super limpo e moderno (fundo) */
+                            card: '#FFFFFF',        /* Branco puro para os cards */
+                            cardLight: '#F1F5F9',   /* Cinza bem claro para sub-cards e lotes */
+                            accent: '#84CC16',      /* Verde limão esportivo vibrante para botões */
+                            accentHover: '#65A30D', /* Verde limão escuro para efeitos hover */
+                            accentText: '#4D7C0F',  /* Verde oliva escuro para textos em fundo claro */
+                            textDark: '#0F172A',    /* Cinza escuro quase preto para títulos marcantes */
+                            textMuted: '#475569'    /* Slate intermediário para leitura perfeita e confortável */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        athletic: ['Montserrat', 'sans-serif']
+                    }
+                }
             }
-            .hero h1 {
-                font-size: 2rem;
+        }
+    </script>
+    <style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .img-aspect-banner {
+            aspect-ratio: 1920 / 395;
+        }
+        @media (max-width: 768px) {
+            .img-aspect-banner {
+                aspect-ratio: 16 / 9; /* Melhora a proporção no celular */
             }
         }
     </style>
 </head>
-<body>
+<body class="bg-brand-light text-brand-textDark font-sans antialiased selection:bg-brand-accent selection:text-black">
 
-    <header>
-        <div class="container">
-            <div class="logo">corridasderua<span>noguaruja</span></div>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#calendario">Inscrições</a></li>
-                </ul>
+    <!-- Menu Superior Translúcido Premium -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-header border-b border-slate-200/60 transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-brand-accent text-brand-textDark p-2 rounded-lg font-athletic font-extrabold text-xl italic tracking-tighter shadow-sm">
+                    CFG
+                </div>
+                <span class="font-athletic font-bold text-lg tracking-wide text-brand-textDark hidden sm:block">CORRIDAS DO GUARUJÁ</span>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-brand-textMuted">
+                <a href="#inicio" class="text-brand-textDark hover:text-brand-accentText transition-colors">Início</a>
+                <a href="#detalhes" class="hover:text-brand-accentText transition-colors">Detalhes do Evento</a>
+                <a href="#regulamentos" class="hover:text-brand-accentText transition-colors">Regulamentos</a>
+                <a href="#suporte" class="hover:text-brand-accentText transition-colors">Suporte</a>
             </nav>
+
+            <div>
+                <a href="https://olhaoingresso.com.br/8corridadosfortesguaruja.html" target="_blank" class="bg-brand-accent hover:bg-brand-accentHover text-brand-textDark px-6 py-2.5 rounded-full font-athletic font-extrabold text-xs uppercase tracking-widest transition-all duration-300 transform hover:scale-105 inline-block text-center shadow-[0_4px_14px_rgba(132,204,22,0.3)]">
+                    COMPRAR INGRESSO
+                </a>
+            </div>
         </div>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="container">
-            <h1>Corridas de Rua no Guarujá</h1>
-            <p>Garanta sua vaga na próxima etapa oficial e desafie seus limites no litoral.</p>
-            <a href="#calendario" class="btn">Inscrições Abertas</a>
+    <!-- Seção Banner Destaque Superior (1920x395 Proporcional) -->
+    <section id="inicio" class="pt-20">
+        <div class="w-full relative overflow-hidden bg-brand-card border-b border-slate-200/60 shadow-sm">
+            <div class="w-full img-aspect-banner relative">
+                <!-- Imagem Oficial do Kit da Corrida dos Fortes adaptada para os dois possíveis nomes -->
+                <img src="image_265643.png%20.png" 
+                     onerror="this.src='image_265643.png'"
+                     alt="VIII Corrida do Forte Guarujá - Banner Oficial" 
+                     class="w-full h-full object-cover object-center absolute inset-0">
+                
+                <!-- Sutil degradiente claro para harmonizar com as bordas e garantir sofisticação -->
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-light/20 to-transparent"></div>
+            </div>
         </div>
     </section>
 
-    <section id="calendario" class="eventos container">
-        <h2>Próximo Evento Destacado</h2>
-        <div class="grid-corridas">
-            
-            <!-- CARD ÚNICO: CORRIDA DOS FORTES (GUARUJÁ) -->
-            <div class="card">
-                <span class="card-data">📅 Domingo, 26 de Julho às 07h</span>
-                <h3 class="card-title">8º Corrida Dos Fortes Guarujá</h3>
-                <div class="card-detalhes">
-                    📍 <strong>Local:</strong> Portaria do Forte dos Andradas, Guarujá (SP)<br>
-                    🏢 <strong>Endereço:</strong> Rua Horácio Guedes Barreiro, s/n - CEP: 11421-080<br>
-                    ⏱️ <strong>Distâncias:</strong> 2K de Caminhada, 5K e 10K de Corrida
+    <!-- Barra de Informações Rápidas -->
+    <div class="bg-brand-card border-b border-slate-200/60 py-6 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <!-- Informações do Evento -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full md:w-auto">
+                    <div class="flex items-center gap-3 bg-brand-light px-4 py-3 rounded-xl border border-slate-200/50 shadow-sm">
+                        <i class="fa-solid fa-calendar-day text-brand-accentText text-xl"></i>
+                        <div>
+                            <span class="text-[10px] text-brand-textMuted uppercase block font-semibold">Data do Evento</span>
+                            <span class="text-sm font-bold font-athletic text-brand-textDark">26/07/2026</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 bg-brand-light px-4 py-3 rounded-xl border border-slate-200/50 shadow-sm">
+                        <i class="fa-solid fa-map-pin text-brand-accentText text-xl"></i>
+                        <div>
+                            <span class="text-[10px] text-brand-textMuted uppercase block font-semibold">Local</span>
+                            <span class="text-sm font-bold font-athletic text-brand-textDark">Guarujá, SP</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 bg-brand-light px-4 py-3 rounded-xl border border-slate-200/50 shadow-sm">
+                        <i class="fa-solid fa-clock text-brand-accentText text-xl"></i>
+                        <div>
+                            <span class="text-[10px] text-brand-textMuted uppercase block font-semibold">Inscrições Desde</span>
+                            <span class="text-sm font-bold font-athletic text-brand-textDark">18/03/2026</span>
+                        </div>
+                    </div>
                 </div>
-                <!-- LINK OFICIAL CONFIGURADO -->
-                <a href="https://olhaoingresso.com.br/8corridadosfortesguaruja.html" target="_blank" class="btn" style="width: 100%; text-align: center;">Comprar Ingresso</a>
+
+                <!-- Botão Comprar Ingresso -->
+                <div class="w-full md:w-auto">
+                    <a href="https://olhaoingresso.com.br/8corridadosfortesguaruja.html" target="_blank" class="w-full md:w-auto block text-center bg-brand-accent hover:bg-brand-accentHover text-brand-textDark font-athletic font-black px-12 py-4 rounded-xl text-sm uppercase tracking-wider transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-brand-accent/30">
+                        COMPRAR INGRESSO <i class="fa-solid fa-chevron-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal do Evento -->
+    <main id="detalhes" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- COLUNA DA ESQUERDA: Informações Detalhadas (8 colunas) -->
+            <div class="lg:col-span-8 space-y-8">
+                
+                <!-- Descrição e Apresentação -->
+                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 sm:p-8 shadow-sm">
+                    <div class="flex items-center gap-2 text-brand-accentText font-bold text-lg mb-4">
+                        <span>🏃‍♂️🔥</span>
+                        <h2 class="font-athletic italic uppercase tracking-tight text-brand-textDark">Corrida dos Fortes 2026 – Guarujá</h2>
+                        <span>🔥🏃‍♂️</span>
+                    </div>
+                    <p class="text-brand-textMuted text-sm sm:text-base leading-relaxed">
+                        Prepare-se para um dos eventos mais esperados do ano! A <strong class="text-brand-textDark">Corrida dos Fortes 2026</strong> chega com muita energia, esporte e superação ⚡. Desafie-se correndo por caminhos repletos de história e belezas naturais preservadas no Forte dos Andradas.
+                    </p>
+                    
+                    <!-- Dados Básicos -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 pt-6 border-t border-slate-100 text-sm text-brand-textMuted">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-calendar text-brand-accentText"></i>
+                            <span><strong class="text-brand-textDark">Data:</strong> 26 de Julho de 2026</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-brand-accentText"></i>
+                            <span><strong class="text-brand-textDark">Local:</strong> Forte dos Andradas</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-stopwatch text-brand-accentText"></i>
+                            <span><strong class="text-brand-textDark">Horário:</strong> 07h00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modalidades -->
+                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 sm:p-8 shadow-sm">
+                    <h3 class="font-athletic font-extrabold text-lg italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-shoe-prints text-brand-accentText"></i> Modalidades
+                    </h3>
+                    <p class="text-brand-textMuted text-xs sm:text-sm mb-4">Escolha seu desafio ideal para esta edição:</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="bg-brand-light p-4 rounded-xl border border-slate-200/40 flex items-center gap-3 shadow-sm">
+                            <span class="text-2xl">🚶‍♂️</span>
+                            <div>
+                                <h4 class="font-bold text-sm text-brand-textDark">Caminhada</h4>
+                                <p class="text-xs text-brand-accentText font-athletic">Distância: 2K</p>
+                            </div>
+                        </div>
+                        <div class="bg-brand-light p-4 rounded-xl border border-slate-200/40 flex items-center gap-3 shadow-sm">
+                            <span class="text-2xl">🏃‍♂️</span>
+                            <div>
+                                <h4 class="font-bold text-sm text-brand-textDark">Corrida</h4>
+                                <p class="text-xs text-brand-accentText font-athletic">Distância: 5K</p>
+                            </div>
+                        </div>
+                        <div class="bg-brand-light p-4 rounded-xl border border-slate-200/40 flex items-center gap-3 shadow-sm">
+                            <span class="text-2xl">⚡</span>
+                            <div>
+                                <h4 class="font-bold text-sm text-brand-textDark">Corrida Elite</h4>
+                                <p class="text-xs text-brand-accentText font-athletic">Distância: 10K</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premiação -->
+                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 sm:p-8 shadow-sm">
+                    <h3 class="font-athletic font-extrabold text-lg italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-trophy text-brand-accentText"></i> Premiação
+                    </h3>
+                    <ul class="space-y-3 text-sm text-brand-textMuted">
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-accentText text-base">🏅</span>
+                            <span>Medalha exclusiva para todos os participantes que concluírem a prova regulamentar.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-accentText text-base">🏆</span>
+                            <span>Troféu de destaque especial para o 1º ao 5º lugar geral (nas modalidades de 5K e 10K).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-accentText text-base">🎖️</span>
+                            <span>Premiação dedicada por faixa etária (exclusivamente na modalidade 10K).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-accentText text-base">🚫</span>
+                            <span>Atenção: Não haverá premiação em dinheiro físico para os vencedores.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Inscrições e Lotes -->
+                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 sm:p-8 shadow-sm">
+                    <h3 class="font-athletic font-extrabold text-lg italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-ticket text-brand-accentText"></i> Inscrições
+                    </h3>
+                    <p class="text-brand-textMuted text-xs sm:text-sm mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-laptop text-brand-accentText"></i> Todas as inscrições são realizadas de forma prática e segura online.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Lote 1 -->
+                        <div class="bg-brand-light p-6 rounded-xl border border-slate-200/60 relative overflow-hidden group hover:border-brand-accent/60 transition-all duration-300 shadow-sm">
+                            <span class="absolute top-0 right-0 bg-brand-accent text-brand-textDark font-athletic font-black text-[9px] px-3 py-1 rounded-bl-lg uppercase">
+                                Lote 1
+                            </span>
+                            <h4 class="font-athletic font-bold text-sm text-brand-textDark uppercase mb-3">1º Lote (Até 03/06)</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-brand-textMuted">Kit Completo</span>
+                                    <span class="text-brand-accentText font-bold">R$ 110,00 <span class="text-[10px] text-brand-textMuted">+ taxa</span></span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm pt-2 border-t border-slate-200/40">
+                                    <span class="text-brand-textMuted">Kit Econômico</span>
+                                    <span class="text-brand-accentText font-bold">R$ 75,00 <span class="text-[10px] text-brand-textMuted">+ taxa</span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lote 2 -->
+                        <div class="bg-brand-light p-6 rounded-xl border border-slate-200/60 relative overflow-hidden group hover:border-brand-accent/60 transition-all duration-300 shadow-sm">
+                            <span class="absolute top-0 right-0 bg-brand-accent/20 text-brand-accentText font-athletic font-black text-[9px] px-3 py-1 rounded-bl-lg uppercase">
+                                Lote 2
+                            </span>
+                            <h4 class="font-athletic font-bold text-sm text-brand-textDark uppercase mb-3">2º Lote (Até 19/07)</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-brand-textMuted">Kit Completo</span>
+                                    <span class="text-brand-accentText font-bold">R$ 125,00 <span class="text-[10px] text-brand-textMuted">+ taxa</span></span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm pt-2 border-t border-slate-200/40">
+                                    <span class="text-brand-textMuted">Kit Econômico</span>
+                                    <span class="text-brand-accentText font-bold">R$ 90,00 <span class="text-[10px] text-brand-textMuted">+ taxa</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bloco de Alerta Esportivo Light -->
+                    <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-4 flex items-center gap-3">
+                        <span class="text-lg">⚠️</span>
+                        <p class="text-xs text-amber-800 font-medium">Atenção: Vagas limitadas! Garanta sua presença antes da virada de lote.</p>
+                    </div>
+                </div>
+
+                <!-- Kit do Atleta -->
+                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 sm:p-8 shadow-sm">
+                    <h3 class="font-athletic font-extrabold text-lg italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-shirt text-brand-accentText"></i> Kit do Atleta
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-brand-light p-5 rounded-xl border border-slate-200/40 shadow-sm">
+                            <h4 class="font-bold text-sm text-brand-accentText uppercase mb-2">🎒 Kit Completo</h4>
+                            <p class="text-xs text-brand-textMuted leading-relaxed">
+                                Inclui camiseta oficial exclusiva em tecido tecnológico, boné de alta proteção, sacochila esportiva reforçada, número de peito oficial de corrida e chip de cronometragem.
+                            </p>
+                        </div>
+                        <div class="bg-brand-light p-5 rounded-xl border border-slate-200/40 shadow-sm">
+                            <h4 class="font-bold text-sm text-brand-accentText uppercase mb-2">🏷️ Kit Econômico</h4>
+                            <p class="text-xs text-brand-textMuted leading-relaxed">
+                                Contém número de peito oficial de corrida e o chip de cronometragem de alta precisão para a sua prova.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informações Importantes -->
+                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 sm:p-8 shadow-sm">
+                    <h3 class="font-athletic font-extrabold text-lg italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-info text-brand-accentText"></i> Informações Importantes
+                    </h3>
+                    <ul class="space-y-3 text-sm text-brand-textMuted">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-brand-accentText"></i> Tempo máximo de prova regulamentar: 2 horas.
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-brand-accentText"></i> O evento acontecerá sob qualquer condição climática 🌧️☀️.
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-brand-accentText"></i> Idade mínima de participação regulada conforme regras oficiais.
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-brand-accentText"></i> Atletas com idade acima de 60 anos têm direito a 50% de desconto.
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-brand-accentText"></i> As inscrições encerram em 19/07/2026 ou ao atingir o limite técnico.
+                        </li>
+                    </ul>
+                    <div class="mt-4 bg-brand-light p-4 rounded-xl border border-slate-200/60">
+                        <p class="text-xs text-brand-textMuted leading-relaxed">
+                            <strong class="text-brand-textDark">⚠️ Atenção obrigatória:</strong> Ao efetuar a sua inscrição, o atleta declara estar plenamente apto físico e clinicamente para participar e concorda integralmente com as regras do evento.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mapa do Percurso (Recortado dinamicamente via CSS do print original) -->
+                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 sm:p-8 shadow-sm">
+                    <h3 class="font-athletic font-extrabold text-lg italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-map-location-dot text-brand-accentText"></i> Mapa do Percurso
+                    </h3>
+                    <div class="rounded-xl overflow-hidden bg-brand-light border border-slate-200/60 relative aspect-[16/10] w-full shadow-inner">
+                        <!-- Recorte CSS ultra-preciso focado no mapa de rotas azul do print original -->
+                        <img src="Captura%20de%20tela%202026-06-23%20104241.png" 
+                             alt="Mapa do Percurso Forte dos Andradas" 
+                             class="absolute w-full h-full object-cover"
+                             style="object-position: 45.4% 87.5%; transform: scale(3.2); transform-origin: 45.4% 87.5%;"
+                             onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Mapa+do+Percurso+Forte+dos+Andradas'">
+                        
+                        <!-- Overlay Informativo flutuante light -->
+                        <div class="absolute bottom-4 left-4 z-10 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-slate-200/60 max-w-xs shadow-lg">
+                            <h4 class="font-bold text-xs text-brand-textDark flex items-center gap-2">
+                                <i class="fa-solid fa-route text-brand-accentText"></i> Percurso Oficial 10K / 5K / 2K
+                            </h4>
+                            <p class="text-[10px] text-brand-textMuted mt-1">
+                                Trajeto histórico exclusivo passando por dentro do Forte dos Andradas, Guarujá.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
-    </section>
+            <!-- COLUNA DA DIREITA: Sidebar / Painel Lateral (4 colunas) -->
+            <aside class="lg:col-span-4 space-y-6">
+                
+                <!-- Regulamentos -->
+                <div id="regulamentos" class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 shadow-sm">
+                    <h3 class="font-athletic font-extrabold text-md italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-file-pdf text-brand-accentText"></i> Regulamentos
+                    </h3>
+                    <div class="space-y-3 text-sm">
+                        <a href="#" class="flex items-center justify-between p-3 bg-brand-light rounded-xl border border-slate-200/40 hover:border-brand-accent/40 transition-all group shadow-sm">
+                            <span class="text-xs text-brand-textMuted group-hover:text-brand-textDark font-medium transition-colors">📄 Regulamento Oficial</span>
+                            <i class="fa-solid fa-download text-brand-accentText text-xs"></i>
+                        </a>
+                        <a href="#" class="flex items-center justify-between p-3 bg-brand-light rounded-xl border border-slate-200/40 hover:border-brand-accent/40 transition-all group shadow-sm">
+                            <span class="text-xs text-brand-textMuted group-hover:text-brand-textDark font-medium transition-colors">📄 Termos de Uso</span>
+                            <i class="fa-solid fa-download text-brand-accentText text-xs"></i>
+                        </a>
+                    </div>
+                </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 corridasderuanoguaruja.com.br. Todos os direitos reservados.</p>
+                <!-- Prazos Importantes -->
+                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 shadow-sm">
+                    <h3 class="font-athletic font-extrabold text-md italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-hourglass-half text-brand-accentText"></i> Prazos Importantes
+                    </h3>
+                    <div class="bg-brand-light p-4 rounded-xl border border-slate-200/40 shadow-sm">
+                        <span class="text-[10px] text-brand-accentText font-bold uppercase tracking-widest block mb-1">Período de Ajustes</span>
+                        <p class="text-xs text-brand-textMuted leading-relaxed">
+                            Alterações de titularidade, alteração do tamanho do Kit adquirido ou alteração da modalidade escolhida devem ser feitas impreterivelmente de:
+                        </p>
+                        <div class="mt-3 text-xs bg-brand-card p-2 rounded-lg text-center font-athletic font-bold text-brand-textDark border border-slate-200/60 shadow-sm">
+                            18/03/2026 até 19/07/2026
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organizador / Suporte -->
+                <div id="suporte" class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 shadow-sm">
+                    <h3 class="font-athletic font-extrabold text-md italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-user-shield text-brand-accentText"></i> Organizador/Suporte
+                    </h3>
+                    <div class="space-y-4 text-xs text-brand-textMuted">
+                        <div>
+                            <span class="text-[10px] uppercase text-brand-textDark font-bold block mb-1">Realização</span>
+                            <span class="text-brand-accentText font-athletic font-extrabold">EDUCA GUARUJÁ</span>
+                        </div>
+                        <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
+                            <i class="fa-solid fa-envelope text-brand-accentText text-base"></i>
+                            <div>
+                                <span class="block text-[9px] uppercase font-semibold">E-mail de Contato</span>
+                                <a href="mailto:educa.vendas@gmail.com" class="text-brand-textDark font-medium hover:underline">educa.vendas@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
+                            <i class="fa-solid fa-phone text-brand-accentText text-base"></i>
+                            <div>
+                                <span class="block text-[9px] uppercase font-semibold">Suporte Fone</span>
+                                <a href="tel:+5513991211711" class="text-brand-textDark font-medium hover:underline">(13) 99121-1711</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
+                            <i class="fa-solid fa-comments text-brand-accentText text-base"></i>
+                            <div>
+                                <span class="block text-[9px] uppercase font-semibold">WhatsApp Suporte</span>
+                                <a href="https://wa.me/5513997211711" target="_blank" class="text-brand-textDark hover:underline font-bold">(13) 99721-1711</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compartilhe -->
+                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 shadow-sm">
+                    <h3 class="font-athletic font-extrabold text-md italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-share-nodes text-brand-accentText"></i> Compartilhe
+                    </h3>
+                    <div class="flex items-center gap-3">
+                        <a href="#" class="w-10 h-10 rounded-xl bg-pink-600 hover:bg-pink-500 flex items-center justify-center text-white text-lg transition-colors shadow-md">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-green-600 hover:bg-green-500 flex items-center justify-center text-white text-lg transition-colors shadow-md">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-blue-600 hover:bg-blue-500 flex items-center justify-center text-white text-lg transition-colors shadow-md">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kits Disponíveis (Imagens Oficiais Aplicadas) -->
+                <div class="bg-brand-card rounded-2xl border border-slate-200/60 p-6 shadow-sm">
+                    <h3 class="font-athletic font-extrabold text-md italic text-brand-textDark uppercase mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-box-open text-brand-accentText"></i> Kits Disponíveis
+                    </h3>
+                    <div class="space-y-4">
+                        <!-- Card do Kit Oficial utilizando a imagem image_265945.png -->
+                        <div class="bg-brand-light p-4 rounded-xl border border-slate-200/60 shadow-sm">
+                            <div class="w-full aspect-[4/5] rounded-lg overflow-hidden bg-brand-card border border-slate-200/40 mb-3 relative shadow-inner">
+                                <img src="image_265945.png" 
+                                     onerror="this.src='https://placehold.co/300x375/e2e8f0/475569?text=Kit+Oficial'"
+                                     alt="Kit Oficial do Atleta - Corrida dos Fortes" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-xs font-bold text-brand-textDark uppercase tracking-wider flex justify-between items-center">
+                                <span>KIT COMPLETO</span>
+                                <span class="text-brand-accentText font-extrabold">OFICIAL</span>
+                            </h4>
+                            <p class="text-[10px] text-brand-textMuted mt-1 leading-relaxed">
+                                Camiseta Oficial Azul + Sacochila Esportiva + Boné Exclusivo + Numeral de Peito Oficial e Chip Eletrônico.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Rodapé Premium Dark (Ancoragem visual sofisticada) -->
+    <footer class="bg-slate-900 text-white py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6 mb-8">
+                <div class="flex items-center gap-3">
+                    <div class="bg-brand-accent text-slate-900 p-2 rounded-lg font-athletic font-extrabold text-xl italic tracking-tighter">
+                        CFG
+                    </div>
+                    <span class="font-athletic font-bold text-lg tracking-wide text-white">CORRIDAS DO GUARUJÁ</span>
+                </div>
+                <div class="text-slate-400 text-xs font-medium">
+                    Plataforma Oficial de Corridas de Guarujá © 2026. Todos os direitos reservados.
+                </div>
+            </div>
+            <div class="text-[11px] text-slate-500 text-center sm:text-left border-t border-slate-800 pt-6 leading-relaxed">
+                Este site é um parceiro oficial da Olha o Ingresso. Todas as inscrições são processadas de forma segura de acordo com a LGPD e normas bancárias vigentes. Realização por EDUCA GUARUJÁ.
+            </div>
         </div>
     </footer>
 
