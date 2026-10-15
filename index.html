@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corridas de Rua no Guarujá 2026 - Educa Guarujá Sport Fitness</title>
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome -->
@@ -86,9 +87,10 @@
             <!-- Menu de Navegação -->
             <nav class="hidden lg:flex items-center gap-6 text-xs font-semibold">
                 <a href="#eventos" class="text-slate-600 hover:text-brand-charcoal transition-colors">Início</a>
-                <a href="#oktoberrun" class="text-slate-600 hover:text-brand-charcoal transition-colors">Oktober Run</a>
                 <a href="#vicentecarvalho" class="text-slate-600 hover:text-brand-charcoal transition-colors">Vicente de Carvalho</a>
                 <a href="#unoeste" class="text-slate-600 hover:text-brand-charcoal transition-colors">Unoeste RUN</a>
+                <a href="#oktoberrun" class="text-slate-600 hover:text-brand-charcoal transition-colors">Oktober Run</a>
+                <a href="#mirantes" class="text-slate-600 hover:text-brand-charcoal transition-colors">Mirantes 5K</a>
                 <button onclick="abrirTermos()" class="text-slate-600 hover:text-brand-charcoal transition-colors">Termos</button>
             </nav>
 
@@ -101,29 +103,12 @@
         </div>
     </header>
 
-    <!-- Banner Principal com Carrossel/Roleta (4 Eventos em Ordem Cronológica) -->
+    <!-- Banner Principal com Carrossel (4 Eventos Cronológicos) -->
     <section class="relative w-full overflow-hidden bg-slate-900">
         <div class="swiper mySwiper w-full h-[320px] sm:h-[420px] lg:h-[480px]">
             <div class="swiper-wrapper">
 
-                <!-- Slide 2: Oktober Run (18 OUTUBRO 2026) -->
-                <div class="swiper-slide relative bg-slate-900 flex items-center justify-center">
-                    <img src="imagens/oktoberrun.png" alt="Oktober Run 2026" class="w-full h-full object-cover sm:object-contain bg-slate-950" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1920&q=80';">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent pointer-events-none"></div>
-                    <div class="absolute bottom-6 sm:bottom-10 left-6 right-6 max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
-                        <div class="text-white space-y-1">
-                            <span class="bg-amber-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow">18 OUT 2026</span>
-                            <h1 class="text-xl sm:text-3xl font-black uppercase mt-2 drop-shadow-md text-white">Oktober Run - 1ª Corrida do Chopp 5K</h1>
-                            <p class="text-xs sm:text-sm text-slate-200 font-medium">Rudy's, Centro de Guarujá (SP) • Largada às 07:00 AM</p>
-                        </div>
-                        <a href="https://olhaoingresso.com.br/oktoberrun.html" target="_blank" class="bg-amber-400 hover:bg-white text-slate-950 font-extrabold text-xs uppercase tracking-widest px-8 py-3.5 rounded-xl transition-all shadow-lg flex items-center gap-2">
-                            <span>Inscrição Oktober Run</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Slide 3: II Corrida de Vicente de Carvalho (01 NOVEMBRO 2026) -->
+                <!-- Slide 1: II Corrida de Vicente de Carvalho (01 NOVEMBRO 2026) -->
                 <div class="swiper-slide relative bg-slate-900 flex items-center justify-center">
                     <img src="imagens/vicentedecarvalho.png" alt="II Corrida de Vicente de Carvalho 2026" class="w-full h-full object-cover sm:object-contain bg-slate-950" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1920&q=80';">
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent pointer-events-none"></div>
@@ -140,7 +125,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 4: Unoeste RUN (08 NOVEMBRO 2026) -->
+                <!-- Slide 2: Unoeste RUN (08 NOVEMBRO 2026) -->
                 <div class="swiper-slide relative bg-slate-900 flex items-center justify-center">
                     <img src="imagens/unoeste.png" alt="Unoeste RUN 2026" class="w-full h-full object-cover sm:object-contain bg-slate-950" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1502224562085-639556652f33?auto=format&fit=crop&w=1920&q=80';">
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent pointer-events-none"></div>
@@ -152,6 +137,40 @@
                         </div>
                         <a href="https://olhaoingresso.com.br/corridaunoesterun.html" target="_blank" class="bg-brand hover:bg-white text-brand-charcoal font-extrabold text-xs uppercase tracking-widest px-8 py-3.5 rounded-xl transition-all shadow-lg flex items-center gap-2">
                             <span>Inscrição Unoeste</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Oktober Run (29 NOVEMBRO 2026) -->
+                <div class="swiper-slide relative bg-slate-900 flex items-center justify-center">
+                    <img src="imagens/oktoberrun.png" alt="Oktober Run 2026" class="w-full h-full object-cover sm:object-contain bg-slate-950" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1920&q=80';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-6 sm:bottom-10 left-6 right-6 max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
+                        <div class="text-white space-y-1">
+                            <span class="bg-amber-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow">29 NOV 2026</span>
+                            <h1 class="text-xl sm:text-3xl font-black uppercase mt-2 drop-shadow-md text-white">Oktober Run - 1ª Corrida do Chopp 5K</h1>
+                            <p class="text-xs sm:text-sm text-slate-200 font-medium">Rudy's, Centro de Guarujá (SP) • Largada às 07:00 AM</p>
+                        </div>
+                        <a href="https://olhaoingresso.com.br/oktoberrun.html" target="_blank" class="bg-amber-400 hover:bg-white text-slate-950 font-extrabold text-xs uppercase tracking-widest px-8 py-3.5 rounded-xl transition-all shadow-lg flex items-center gap-2">
+                            <span>Inscrição Oktober Run</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Slide 4: IV Corrida dos Mirantes 5K (20 DEZEMBRO 2026) -->
+                <div class="swiper-slide relative bg-slate-900 flex items-center justify-center">
+                    <img src="imagens/mirantes.png" alt="IV Corrida dos Mirantes 5K 2026" class="w-full h-full object-cover sm:object-contain bg-slate-950" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?auto=format&fit=crop&w=1920&q=80';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-6 sm:bottom-10 left-6 right-6 max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
+                        <div class="text-white space-y-1">
+                            <span class="bg-emerald-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow">20 DEZ 2026</span>
+                            <h1 class="text-xl sm:text-3xl font-black uppercase mt-2 drop-shadow-md text-white">IV Corrida dos Mirantes 5K</h1>
+                            <p class="text-xs sm:text-sm text-slate-200 font-medium">Mirante das Galhetas → Mirante da Campinas, Guarujá (SP) • Largada às 07:00 AM</p>
+                        </div>
+                        <a href="https://olhaoingresso.com.br/corridadosmirantes-eg.html" target="_blank" class="bg-emerald-400 hover:bg-white text-slate-950 font-extrabold text-xs uppercase tracking-widest px-8 py-3.5 rounded-xl transition-all shadow-lg flex items-center gap-2">
+                            <span>Inscrição Mirantes 5K</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
@@ -200,64 +219,7 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 w-full flex-grow" id="eventos">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             
-            <!-- Evento 2: Oktober Run (18 DE OUTUBRO) -->
-            <section class="bg-white rounded-2xl border border-slate-200/80 shadow-md p-6 sm:p-8 flex flex-col justify-between h-full" id="oktoberrun">
-                <div class="space-y-6">
-                    <div class="flex items-center gap-3 pb-2 border-b border-slate-100">
-                        <span class="w-2.5 h-8 bg-amber-400 rounded-full"></span>
-                        <div>
-                            <span class="text-[10px] font-black uppercase text-amber-600 tracking-widest block">18 de Outubro de 2026</span>
-                            <h2 class="text-xl font-extrabold text-slate-900 uppercase tracking-tight">Oktober Run - 1ª Corrida do Chopp 5K</h2>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs bg-slate-50 p-4 rounded-xl border border-slate-100">
-                        <div><i class="fa-regular fa-calendar text-amber-500 font-bold mr-1.5"></i> <strong>Data:</strong> 18/10/2026</div>
-                        <div><i class="fa-regular fa-clock text-amber-500 font-bold mr-1.5"></i> <strong>Horário:</strong> 07h00 AM</div>
-                        <div class="col-span-2"><i class="fa-solid fa-location-dot text-amber-500 font-bold mr-1.5"></i> <strong>Local:</strong> Rudy's - Rua Rio de Janeiro, 274 (Centro)</div>
-                    </div>
-
-                    <div class="space-y-3">
-                        <h3 class="font-bold text-slate-800 text-xs uppercase tracking-wider flex items-center gap-2">
-                            <i class="fa-solid fa-tag text-amber-500"></i> Tabela de Preços (5K)
-                        </h3>
-                        <div class="space-y-2 text-xs bg-slate-50 p-4 rounded-xl border border-slate-100">
-                            <div class="flex justify-between py-1.5 border-b border-slate-200/60">
-                                <span class="font-medium text-slate-600">Kit Atleta (Camiseta + Caneca)</span>
-                                <span class="font-extrabold text-brand-charcoal">R$ 105,00</span>
-                            </div>
-                            <div class="flex justify-between py-1.5">
-                                <span class="font-medium text-slate-600">Kit Econômico (Sem Camiseta)</span>
-                                <span class="font-extrabold text-brand-charcoal">R$ 75,00</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="space-y-2">
-                        <div class="flex items-center justify-between">
-                            <h3 class="font-bold text-slate-800 text-xs uppercase tracking-wider flex items-center gap-2">
-                                <i class="fa-solid fa-beer-mug-empty text-amber-500"></i> Kit & Brindes Exclusivos
-                            </h3>
-                            <span class="text-[10px] text-slate-400 font-semibold italic"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Clique para ampliar</span>
-                        </div>
-                        <div class="rounded-xl border border-slate-200/80 bg-slate-100/70 h-56 flex items-center justify-center p-2 cursor-pointer group relative overflow-hidden shadow-inner" onclick="abrirZoom('imagens/oktoberrun.png', 'Kit Oficial - Oktober Run 2026')">
-                            <img src="imagens/oktoberrun.png" alt="Kit Atleta Oktober Run" class="w-full h-full object-contain rounded-lg group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80';">
-                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
-                                <span class="bg-amber-400 text-slate-950 font-black text-xs px-4 py-2 rounded-xl shadow-lg uppercase tracking-wider flex items-center gap-2">
-                                    <i class="fa-solid fa-expand"></i> Ampliar Kit
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="https://olhaoingresso.com.br/oktoberrun.html" target="_blank" class="w-full bg-amber-400 hover:bg-slate-900 text-slate-950 hover:text-white font-extrabold uppercase text-xs tracking-widest py-4 rounded-xl text-center shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 mt-8">
-                    <span>Inscrição Oktober Run</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </section>
-
-            <!-- Evento 3: II Corrida de Vicente de Carvalho (01 DE NOVEMBRO) -->
+            <!-- Evento 1: II Corrida de Vicente de Carvalho (01 DE NOVEMBRO) -->
             <section class="bg-white rounded-2xl border border-slate-200/80 shadow-md p-6 sm:p-8 flex flex-col justify-between h-full" id="vicentecarvalho">
                 <div class="space-y-6">
                     <div class="flex items-center gap-3 pb-2 border-b border-slate-100">
@@ -314,7 +276,7 @@
                 </a>
             </section>
 
-            <!-- Evento 4: Unoeste RUN (08 DE NOVEMBRO) -->
+            <!-- Evento 2: Unoeste RUN (08 DE NOVEMBRO) -->
             <section class="bg-white rounded-2xl border border-slate-200/80 shadow-md p-6 sm:p-8 flex flex-col justify-between h-full" id="unoeste">
                 <div class="space-y-6">
                     <div class="flex items-center gap-3 pb-2 border-b border-slate-100">
@@ -371,6 +333,120 @@
 
                 <a href="https://olhaoingresso.com.br/corridaunoesterun.html" target="_blank" class="w-full bg-brand hover:bg-brand-charcoal text-brand-charcoal hover:text-white font-extrabold uppercase text-xs tracking-widest py-4 rounded-xl text-center shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 mt-8">
                     <span>Inscrição Unoeste RUN</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </section>
+
+            <!-- Evento 3: Oktober Run (29 DE NOVEMBRO - NOVA DATA) -->
+            <section class="bg-white rounded-2xl border border-slate-200/80 shadow-md p-6 sm:p-8 flex flex-col justify-between h-full" id="oktoberrun">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 pb-2 border-b border-slate-100">
+                        <span class="w-2.5 h-8 bg-amber-400 rounded-full"></span>
+                        <div>
+                            <span class="text-[10px] font-black uppercase text-amber-600 tracking-widest block">29 de Novembro de 2026</span>
+                            <h2 class="text-xl font-extrabold text-slate-900 uppercase tracking-tight">Oktober Run - 1ª Corrida do Chopp 5K</h2>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <div><i class="fa-regular fa-calendar text-amber-500 font-bold mr-1.5"></i> <strong>Data:</strong> 29/11/2026</div>
+                        <div><i class="fa-regular fa-clock text-amber-500 font-bold mr-1.5"></i> <strong>Horário:</strong> 07h00 AM</div>
+                        <div class="col-span-2"><i class="fa-solid fa-location-dot text-amber-500 font-bold mr-1.5"></i> <strong>Local:</strong> Rudy's - Rua Rio de Janeiro, 274 (Centro)</div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h3 class="font-bold text-slate-800 text-xs uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-tag text-amber-500"></i> Tabela de Preços (5K)
+                        </h3>
+                        <div class="space-y-2 text-xs bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <div class="flex justify-between py-1.5 border-b border-slate-200/60">
+                                <span class="font-medium text-slate-600">Kit Atleta (Camiseta + Caneca)</span>
+                                <span class="font-extrabold text-brand-charcoal">R$ 105,00</span>
+                            </div>
+                            <div class="flex justify-between py-1.5">
+                                <span class="font-medium text-slate-600">Kit Econômico (Sem Camiseta)</span>
+                                <span class="font-extrabold text-brand-charcoal">R$ 75,00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-slate-800 text-xs uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-beer-mug-empty text-amber-500"></i> Kit & Brindes Exclusivos
+                            </h3>
+                            <span class="text-[10px] text-slate-400 font-semibold italic"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Clique para ampliar</span>
+                        </div>
+                        <div class="rounded-xl border border-slate-200/80 bg-slate-100/70 h-56 flex items-center justify-center p-2 cursor-pointer group relative overflow-hidden shadow-inner" onclick="abrirZoom('imagens/oktoberrun.png', 'Kit Oficial - Oktober Run 2026')">
+                            <img src="imagens/oktoberrun.png" alt="Kit Atleta Oktober Run" class="w-full h-full object-contain rounded-lg group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80';">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                                <span class="bg-amber-400 text-slate-950 font-black text-xs px-4 py-2 rounded-xl shadow-lg uppercase tracking-wider flex items-center gap-2">
+                                    <i class="fa-solid fa-expand"></i> Ampliar Kit
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://olhaoingresso.com.br/oktoberrun.html" target="_blank" class="w-full bg-amber-400 hover:bg-slate-900 text-slate-950 hover:text-white font-extrabold uppercase text-xs tracking-widest py-4 rounded-xl text-center shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 mt-8">
+                    <span>Inscrição Oktober Run</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </section>
+
+            <!-- Evento 4: IV Corrida dos Mirantes 5K (20 DE DEZEMBRO) -->
+            <section class="bg-white rounded-2xl border border-slate-200/80 shadow-md p-6 sm:p-8 flex flex-col justify-between h-full" id="mirantes">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 pb-2 border-b border-slate-100">
+                        <span class="w-2.5 h-8 bg-emerald-500 rounded-full"></span>
+                        <div>
+                            <span class="text-[10px] font-black uppercase text-emerald-600 tracking-widest block">20 de Dezembro de 2026</span>
+                            <h2 class="text-xl font-extrabold text-slate-900 uppercase tracking-tight">IV Corrida dos Mirantes 5K</h2>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <div><i class="fa-regular fa-calendar text-emerald-500 font-bold mr-1.5"></i> <strong>Data:</strong> 20/12/2026</div>
+                        <div><i class="fa-regular fa-clock text-emerald-500 font-bold mr-1.5"></i> <strong>Horário:</strong> 07h00 AM</div>
+                        <div class="col-span-2"><i class="fa-solid fa-location-dot text-emerald-500 font-bold mr-1.5"></i> <strong>Local:</strong> Mirante das Galhetas → Mirante da Campinas</div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h3 class="font-bold text-slate-800 text-xs uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-tag text-emerald-500"></i> Tabela de Preços (5K)
+                        </h3>
+                        <div class="space-y-2 text-xs bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <div class="flex justify-between py-1.5 border-b border-slate-200/60">
+                                <span class="font-medium text-slate-600">Kit Atleta Completo (Com Camiseta)</span>
+                                <span class="font-extrabold text-brand-charcoal">R$ 105,00</span>
+                            </div>
+                            <div class="flex justify-between py-1.5">
+                                <span class="font-medium text-slate-600">Kit Econômico (Sem Camiseta)</span>
+                                <span class="font-extrabold text-brand-charcoal">R$ 75,00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-slate-800 text-xs uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-mountain-sun text-emerald-500"></i> Kit Atleta Oficial
+                            </h3>
+                            <span class="text-[10px] text-slate-400 font-semibold italic"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Clique para ampliar</span>
+                        </div>
+                        <div class="rounded-xl border border-slate-200/80 bg-slate-100/70 h-56 flex items-center justify-center p-2 cursor-pointer group relative overflow-hidden shadow-inner" onclick="abrirZoom('imagens/mirantes.png', 'Kit Oficial - IV Corrida dos Mirantes 2026')">
+                            <img src="imagens/mirantes.png" alt="Kit Atleta Corrida dos Mirantes" class="w-full h-full object-contain rounded-lg group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?auto=format&fit=crop&w=800&q=80';">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                                <span class="bg-emerald-400 text-slate-950 font-black text-xs px-4 py-2 rounded-xl shadow-lg uppercase tracking-wider flex items-center gap-2">
+                                    <i class="fa-solid fa-expand"></i> Ampliar Kit
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://olhaoingresso.com.br/corridadosmirantes-eg.html" target="_blank" class="w-full bg-emerald-400 hover:bg-slate-900 text-slate-950 hover:text-white font-extrabold uppercase text-xs tracking-widest py-4 rounded-xl text-center shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 mt-8">
+                    <span>Inscrição Mirantes 5K</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </section>
@@ -508,6 +584,13 @@
 
         modalTermos.addEventListener('click', (e) => {
             if (e.target === modalTermos) fecharTermos();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                fecharZoom();
+                fecharTermos();
+            }
         });
     </script>
 </body>
