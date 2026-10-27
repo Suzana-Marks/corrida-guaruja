@@ -87,7 +87,6 @@
             <!-- Menu de Navegação -->
             <nav class="hidden lg:flex items-center gap-6 text-xs font-semibold">
                 <a href="#eventos" class="text-slate-600 hover:text-brand-charcoal transition-colors">Início</a>
-                <a href="#vicentecarvalho" class="text-slate-600 hover:text-brand-charcoal transition-colors">Vicente de Carvalho</a>
                 <a href="#unoeste" class="text-slate-600 hover:text-brand-charcoal transition-colors">Unoeste RUN</a>
                 <a href="#oktoberrun" class="text-slate-600 hover:text-brand-charcoal transition-colors">Oktober Run</a>
                 <a href="#mirantes" class="text-slate-600 hover:text-brand-charcoal transition-colors">Mirantes 5K</a>
@@ -103,29 +102,12 @@
         </div>
     </header>
 
-    <!-- Banner Principal com Carrossel (4 Eventos Cronológicos) -->
+    <!-- Banner Principal com Carrossel (3 Eventos Cronológicos) -->
     <section class="relative w-full overflow-hidden bg-slate-900">
         <div class="swiper mySwiper w-full h-[320px] sm:h-[420px] lg:h-[480px]">
             <div class="swiper-wrapper">
 
-                <!-- Slide 1: II Corrida de Vicente de Carvalho (01 NOVEMBRO 2026) -->
-                <div class="swiper-slide relative bg-slate-900 flex items-center justify-center">
-                    <img src="imagens/vicentedecarvalho.png" alt="II Corrida de Vicente de Carvalho 2026" class="w-full h-full object-cover sm:object-contain bg-slate-950" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1920&q=80';">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent pointer-events-none"></div>
-                    <div class="absolute bottom-6 sm:bottom-10 left-6 right-6 max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
-                        <div class="text-white space-y-1">
-                            <span class="bg-sky-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow">01 NOV 2026</span>
-                            <h1 class="text-xl sm:text-3xl font-black uppercase mt-2 drop-shadow-md text-white">II Corrida de Vicente de Carvalho</h1>
-                            <p class="text-xs sm:text-sm text-slate-200 font-medium">Praça 14 Bis, Vicente de Carvalho, Guarujá (SP) • 3K Caminhada & 7K Corrida</p>
-                        </div>
-                        <a href="https://olhaoingresso.com.br/IIcorridadevicentedecarvalho.html" target="_blank" class="bg-sky-400 hover:bg-white text-slate-950 font-extrabold text-xs uppercase tracking-widest px-8 py-3.5 rounded-xl transition-all shadow-lg flex items-center gap-2">
-                            <span>Inscrição V. de Carvalho</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Slide 2: Unoeste RUN (08 NOVEMBRO 2026) -->
+                <!-- Slide 1: Unoeste RUN (08 NOVEMBRO 2026) -->
                 <div class="swiper-slide relative bg-slate-900 flex items-center justify-center">
                     <img src="imagens/unoeste.png" alt="Unoeste RUN 2026" class="w-full h-full object-cover sm:object-contain bg-slate-950" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1502224562085-639556652f33?auto=format&fit=crop&w=1920&q=80';">
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent pointer-events-none"></div>
@@ -142,7 +124,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 3: Oktober Run (29 NOVEMBRO 2026) -->
+                <!-- Slide 2: Oktober Run (29 NOVEMBRO 2026) -->
                 <div class="swiper-slide relative bg-slate-900 flex items-center justify-center">
                     <img src="imagens/oktoberrun.png" alt="Oktober Run 2026" class="w-full h-full object-cover sm:object-contain bg-slate-950" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1920&q=80';">
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent pointer-events-none"></div>
@@ -159,7 +141,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 4: IV Corrida dos Mirantes 5K (20 DEZEMBRO 2026) -->
+                <!-- Slide 3: IV Corrida dos Mirantes 5K (20 DEZEMBRO 2026) -->
                 <div class="swiper-slide relative bg-slate-900 flex items-center justify-center">
                     <img src="imagens/mirantes.png" alt="IV Corrida dos Mirantes 5K 2026" class="w-full h-full object-cover sm:object-contain bg-slate-950" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?auto=format&fit=crop&w=1920&q=80';">
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent pointer-events-none"></div>
@@ -202,7 +184,7 @@
                     </div>
                     <div>
                         <p class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Status</p>
-                        <p class="text-sm font-bold text-slate-800">Inscrições Abertas (4 Provas)</p>
+                        <p class="text-sm font-bold text-slate-800">Inscrições Abertas (3 Provas)</p>
                     </div>
                 </div>
             </div>
@@ -215,68 +197,11 @@
         </div>
     </section>
 
-    <!-- Layout dos Eventos (GRADE SIMÉTRICA EM 2 COLUNAS) -->
+    <!-- Layout dos Eventos -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 w-full flex-grow" id="eventos">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
             
-            <!-- Evento 1: II Corrida de Vicente de Carvalho (01 DE NOVEMBRO) -->
-            <section class="bg-white rounded-2xl border border-slate-200/80 shadow-md p-6 sm:p-8 flex flex-col justify-between h-full" id="vicentecarvalho">
-                <div class="space-y-6">
-                    <div class="flex items-center gap-3 pb-2 border-b border-slate-100">
-                        <span class="w-2.5 h-8 bg-sky-500 rounded-full"></span>
-                        <div>
-                            <span class="text-[10px] font-black uppercase text-sky-600 tracking-widest block">01 de Novembro de 2026</span>
-                            <h2 class="text-xl font-extrabold text-slate-900 uppercase tracking-tight">II Corrida de Vicente de Carvalho</h2>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs bg-slate-50 p-4 rounded-xl border border-slate-100">
-                        <div><i class="fa-regular fa-calendar text-sky-500 font-bold mr-1.5"></i> <strong>Data:</strong> 01/11/2026</div>
-                        <div><i class="fa-regular fa-clock text-sky-500 font-bold mr-1.5"></i> <strong>Horário:</strong> 07h00 AM</div>
-                        <div class="col-span-2"><i class="fa-solid fa-location-dot text-sky-500 font-bold mr-1.5"></i> <strong>Local:</strong> Praça 14 Bis (Vicente de Carvalho, Guarujá)</div>
-                    </div>
-
-                    <div class="space-y-3">
-                        <h3 class="font-bold text-slate-800 text-xs uppercase tracking-wider flex items-center gap-2">
-                            <i class="fa-solid fa-tag text-sky-500"></i> Tabela de Preços (3K Caminhada & 7K Corrida)
-                        </h3>
-                        <div class="space-y-2 text-xs bg-slate-50 p-4 rounded-xl border border-slate-100">
-                            <div class="flex justify-between py-1.5 border-b border-slate-200/60">
-                                <span class="font-medium text-slate-600">Kit Completo (Camiseta + Sacochila)</span>
-                                <span class="font-extrabold text-brand-charcoal">R$ 110,00</span>
-                            </div>
-                            <div class="flex justify-between py-1.5">
-                                <span class="font-medium text-slate-600">Kit Econômico (Participação)</span>
-                                <span class="font-extrabold text-brand-charcoal">R$ 75,00</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="space-y-2">
-                        <div class="flex items-center justify-between">
-                            <h3 class="font-bold text-slate-800 text-xs uppercase tracking-wider flex items-center gap-2">
-                                <i class="fa-solid fa-shirt text-sky-500"></i> Kit Atleta Oficial
-                            </h3>
-                            <span class="text-[10px] text-slate-400 font-semibold italic"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Clique para ampliar</span>
-                        </div>
-                        <div class="rounded-xl border border-slate-200/80 bg-slate-100/70 h-56 flex items-center justify-center p-2 cursor-pointer group relative overflow-hidden shadow-inner" onclick="abrirZoom('imagens/vicentedecarvalho.png', 'Kit Oficial - Vicente de Carvalho 2026')">
-                            <img src="imagens/vicentedecarvalho.png" alt="Kit Atleta Vicente de Carvalho" class="w-full h-full object-contain rounded-lg group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80';">
-                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
-                                <span class="bg-sky-400 text-slate-950 font-black text-xs px-4 py-2 rounded-xl shadow-lg uppercase tracking-wider flex items-center gap-2">
-                                    <i class="fa-solid fa-expand"></i> Ampliar Kit
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="https://olhaoingresso.com.br/IIcorridadevicentedecarvalho.html" target="_blank" class="w-full bg-sky-400 hover:bg-slate-900 text-slate-950 hover:text-white font-extrabold uppercase text-xs tracking-widest py-4 rounded-xl text-center shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 mt-8">
-                    <span>Inscrição Vicente de Carvalho</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </section>
-
-            <!-- Evento 2: Unoeste RUN (08 DE NOVEMBRO) -->
+            <!-- Evento 1: Unoeste RUN (08 DE NOVEMBRO) -->
             <section class="bg-white rounded-2xl border border-slate-200/80 shadow-md p-6 sm:p-8 flex flex-col justify-between h-full" id="unoeste">
                 <div class="space-y-6">
                     <div class="flex items-center gap-3 pb-2 border-b border-slate-100">
@@ -337,7 +262,7 @@
                 </a>
             </section>
 
-            <!-- Evento 3: Oktober Run (29 DE NOVEMBRO - NOVA DATA) -->
+            <!-- Evento 2: Oktober Run (29 DE NOVEMBRO) -->
             <section class="bg-white rounded-2xl border border-slate-200/80 shadow-md p-6 sm:p-8 flex flex-col justify-between h-full" id="oktoberrun">
                 <div class="space-y-6">
                     <div class="flex items-center gap-3 pb-2 border-b border-slate-100">
@@ -394,7 +319,7 @@
                 </a>
             </section>
 
-            <!-- Evento 4: IV Corrida dos Mirantes 5K (20 DE DEZEMBRO) -->
+            <!-- Evento 3: IV Corrida dos Mirantes 5K (20 DE DEZEMBRO) -->
             <section class="bg-white rounded-2xl border border-slate-200/80 shadow-md p-6 sm:p-8 flex flex-col justify-between h-full" id="mirantes">
                 <div class="space-y-6">
                     <div class="flex items-center gap-3 pb-2 border-b border-slate-100">
